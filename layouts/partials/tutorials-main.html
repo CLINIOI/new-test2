@@ -1,0 +1,84 @@
+{{- $.Scratch.Set "free_download" false -}}
+{{- $.Scratch.Set "subscribe" true -}}
+{{- $.Scratch.Set "subscribe_class" "section-grey" -}}
+
+<div class="section-default section-tuts">
+  <div class="row">
+  <div class="small-12 medium-4 large-3 columns">
+    <div class="tutorials-sidebar media-tutorial">
+      {{- $prev := "" -}}
+      {{- $next := "" -}}
+      {{- $topicTitle := "" -}}
+      {{- $topics := (sort (where $.Sites.First.RegularPages "Type" "topic")  "Params.order") -}}
+      {{- $byTopicPages := $.Sites.First.RegularPages.GroupByParam "topic" -}}
+      <ul class="tutorial-nav">
+        {{ range $topic := $topics }}
+          {{- $is_current_topic := ( or (eq $.Params.topic $topic.Params.slug) (eq $.RelPermalink $topic.RelPermalink)) -}}
+          {{- $curTopicPage := "" -}}
+          {{- range $topicPage := $byTopicPages -}}
+            {{- if ( eq $topicPage.Key $topic.Params.slug ) -}}
+              {{- $curTopicPage = (sort $topicPage.Pages  "Params.order") -}}
+            {{- end -}}
+          {{- end -}}
+          {{- if $is_current_topic -}}
+              {{- $prev = ($curTopicPage.ByParam "order").Next $ -}}
+              {{- $next = ($curTopicPage.ByParam "order").Prev $ -}}
+              {{- $topicTitle = $topic.Title }}
+          {{- end -}}
+          <li {{ if ($is_current_topic) }} class="active" 
+              {{ else }} class="no-active"{{ end }}>
+            <a href="{{$topic.RelPermalink}}">
+              <i {{ if ($is_current_topic) }}  class="active-sub-icon"
+              {{ else }}  class="no-active-icon" {{ end }}></i>
+              {{ $topic.Title }}</a>
+            <ul class="tutorial-sub-nav {{ if ($is_current_topic) }}topic-open{{ end }}">
+              {{ range $page := $curTopicPage }}
+              <li {{ if eq $.RelPermalink $page.RelPermalink }} class="active" {{ end }}>
+                  <a href="{{$page.RelPermalink}}">{{$page.Title}} {{ if $page.Params.pro }}<span class="tutorial-pro">PRO{{ if $page.Params.proplus }}+{{ end }}</span>{{ end }}</a>
+              </li>
+              {{ end }}
+            </ul>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+  <div class="small-12 offset-large-1 large-8 medium-8 columns">
+    <div class="tutorial-content">
+      {{- if (and $topicTitle (ne $.Type "topic")) -}}
+        <p class="tutorial-topic">{{ upper $topicTitle }}</p>
+        {{end}}
+        <h1>{{$.Title}}{{ if $.Params.pro }}<span class="tutorial-pro">PRO{{ if $.Params.proplus }}+{{ end }}</span>{{end}}</h1>
+    {{ $.Content }}
+    {{- if (eq $.Type "topic") -}}
+      {{ partial "topic/tutorials" . }}
+    {{- end -}}
+    {{ partial "pager-tutorials" . }}
+    </div>   
+  </div>  
+  </div>
+  <div class="row">
+    <div class="button-nav-bottom">
+        {{ if $prev }}
+        <div class="left">
+          <a href="{{ $prev.RelPermalink }}">
+          <div class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="18"><path fill="none" fill-rule="#9297A1" stroke="#9297A1" stroke-width="1" d="M1 1.929L8.071 9 1 16.071"/></svg>
+          </div>
+          </a>
+          <a href="{{ $prev.RelPermalink }}">{{ $prev.Title }}</a>
+        </div>
+        {{ end }}
+        {{ if $next }}
+        <div class="right">
+          <a href="{{ $next.RelPermalink }}">{{ $next.Title }}</a>
+          <a href="{{ $next.RelPermalink }}">
+          <div class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="18"><path fill="none" fill-rule="#9297A1" stroke="#9297A1" stroke-width="1" d="M1 1.929L8.071 9 1 16.071"/></svg>
+          </div>
+          </a>
+        </div>
+        {{ end }}
+      </div>
+  </div>
+</div>

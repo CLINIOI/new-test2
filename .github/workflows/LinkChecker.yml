@@ -1,0 +1,29 @@
+on:
+  schedule:
+    - cron: '0 0 1,15 * *'
+  repository_dispatch:
+    types: [markdown]
+name: Check links
+jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: pages
+      - name: Cleanup files
+        run: |
+          find . -type f -name '*.json' -exec rm -rf {} \;
+      - name: Link Checker
+        uses: peter-evans/link-checker@v1
+        with:
+          args: -d . -v -r *
+      - name: Remove working links
+        run: |
+          sed '/OK/d' ./link-checker/out.md > ./broken.md
+      - name: Create Issue From File
+        uses: peter-evans/create-issue-from-file@v2
+        with:
+          title: Link Checker Report
+          content-filepath: ./broken.md
+          labels: report, automated issue

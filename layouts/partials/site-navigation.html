@@ -1,0 +1,66 @@
+<div class="navbar">
+  <div class="row">
+    <div class="columns large-2 show-for-large-up navbar-logo" >
+      <a href='{{ "/" | relURL }}'>
+        <img src='{{ "/images/newsletters/common/xpiks.png" | relURL }}' alt="xpiks">
+        <span class="line-logo"></span>
+        <span class='navbar-logo-text'>xpiks</span> 
+      </a>
+    </div>
+    <nav id="nav" class="columns small-12 large-10">
+      <a class="navbar-logo-mobile hide-for-large-up" href='{{ "/" | relURL }}'>
+        <img src='{{ "/images/newsletters/common/xpiks.png" | relURL }}' alt="xpiks">
+        <span class="line-logo"></span>
+        <span class='navbar-logo-text'>xpiks</span> 
+      </a>
+      <label for="toggle-checkbox" id="toggle-menu"></label>
+      <input type="checkbox" id="toggle-checkbox">
+
+      <ul class="primary-nav">
+          {{- $data := index site.Data site.Language.Lang -}}
+          {{- range $nav := $data.nav }}
+          <li {{- if hasPrefix $.Permalink (absURL $nav.href) }} class="active"
+            {{- else if $nav.highlight                      }} class="highlight"
+            {{- else if $nav.gold                           }} class="highlight-gold" {{- end -}}>
+            <a href="{{ $nav.href | relURL }}">{{ $nav.title }}  
+               <svg class="arrow-none" xmlns="http://www.w3.org/2000/svg" width="11" height="18" ><path fill="none" fill-rule="evenodd" stroke="#fff" stroke-width="2" d="M1 1.929L8.071 9 1 16.071"/></svg>
+            </a>
+          </li>
+          <div {{- if ($nav.hasMenu) }} class="tutorials-sidebar" {{ else }} class="tutorials-sidebar menu-tutorials-none"  {{- end -}}>
+            {{- $topics := (sort (where $.Sites.First.RegularPages "Type" "topic")  "Params.order")  -}}
+            {{- $byTopicPages := $.Sites.First.RegularPages.GroupByParam "topic" -}}
+            <ul {{- if hasPrefix $.Permalink (absURL "/tutorials/") }} class="tutorial-nav" {{ else }} class="menu-tutorials-none" {{ end -}}>
+              {{ range $topic := $topics }}
+                {{- $is_current_topic := ( or (eq $.Params.topic $topic.Params.slug) (eq $.RelPermalink $topic.RelPermalink)) }}
+                {{- $curTopicPage := "" }}
+                {{- range $topicPage := $byTopicPages }}
+                  {{- if ( eq $topicPage.Key $topic.Params.slug ) -}}
+                    {{ $curTopicPage = (sort $topicPage.Pages  "Params.order") }}
+                  {{- end -}}
+                {{- end -}}
+                <li {{ if ($is_current_topic) }}class="active"{{ else }}class="no-active"{{ end }}>
+                  <a href="{{$topic.RelPermalink}}">{{ $topic.Title }}</a>
+                  <ul class="tutorial-sub-nav {{ if ($is_current_topic) }}topic-open{{ end }}">
+                    {{ range $page := $curTopicPage -}}
+                    <li {{- if eq $.RelPermalink $page.RelPermalink}} class="active"{{ end }}>
+                        <a href="{{$page.RelPermalink}}">- {{$page.Title}} {{ if $page.Params.pro }}<span class="tutorial-pro">PRO</span>{{ end }}</a>
+                    </li>
+                    {{ end }}
+                  </ul>
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+          {{- end }}
+          {{- if hasPrefix $.Permalink (absURL "/downloads/") }}
+          <a class="button white-btn-color position-btn plausible-event-name=Buy plausible-event-position=header"
+          href="/pricing/">Buy</a>
+          {{ else }}
+          <a class="button white-btn-color position-btn plausible-event-name=Download plausible-event-position=header"
+          href="/downloads/">Download</a>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</div>
+

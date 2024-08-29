@@ -1,0 +1,47 @@
+- title: 'Xpiks 1.5.5.1 published'
+  type: status-ok
+  date: 2019-09-21T16:49:40-08:00
+  content: >
+    There are no ongoing incidents at the moment.
+
+- title: 'Xpiks 1.5.3.2 published'
+  type: status-ok
+  date: 2019-07-09T22:01:22-08:00
+  content: >
+    Some users see black window on macOS below 10.14.5.
+
+- title: 'Hotfix 1.5.0.5 published'
+  type: status-ok
+  date: 2018-01-17T23:15:51+03:00
+  content: >
+    This is another hotfix for the issue with missing video thumbnails
+
+- title: 'Users still report missing thumbnails on some video files'
+  type: status-warning
+  date: 2018-01-17T13:15:22+03:00
+  content: >
+    Issue with black thumbnails strikes back. Currently under investigation.
+
+- title: 'Metadata is missing sometimes when files opened from Google Drive'
+  type: status-warning
+  date: 2018-01-16T16:01:34+03:00
+  content: >
+    There's a report that metadata sometimes cannot be read from the first try (but is read on second). These files are stored on Google Drive and the issue didn't repro in Xpiks 1.4.2
+
+- title: 'Hotfix 1.5.0.2 published'
+  type: status-ok
+  date: 2018-01-15T23:37:00+03:00
+  content: >
+    Hotfix for issue with black video thumbnails on Windows
+
+- title: 'Some users reported missing thumbnails on Windows 10'
+  type: status-warning
+  date: 2018-01-15T15:24:10+03:00
+  content: >
+    There's a report of missing thumbnails on Windows after 1.5.0 release publishing
+
+- title: 'Xpiks 1.5.0 release published'
+  type: status-ok
+  date: 2018-01-15T12:00:23+03:00
+  content: >
+    There are no ongoing incidents at the moment

@@ -1,0 +1,19 @@
+{
+    "faq": [
+      {{range $index, $item := $.Site.Data.faq -}}
+      {{if $index}}, {{end}}
+      {{ dict "url" ($item.anchor | printf "https://xpiksapp.com/faq#%s") "title" $item.title "content" ($item.content | htmlUnescape | plainify) "keywords" (delimit ($item.keywords | default slice) " ") | jsonify }}{{ end }}
+    ],
+    "blogposts": [
+        {{ range $index, $page := (where $.Sites.First.RegularPages "Type" "blog" ) }}
+        {{if $index}}, {{end}} {{ $content := ($page.Plain | replaceRE "(?m)(\\w+:\\/\\/\\S*)" "") }}
+        {{ dict "url" $page.Permalink "content" ($content | htmlUnescape) "title" $page.Title "date" $page.Params.date | jsonify }}
+        {{ end }}
+    ],
+    "tutorials": [
+        {{ range $index, $page := (where $.Sites.First.RegularPages "Type" "tutorials" ) }}
+        {{if $index}}, {{end}} {{ $content := ($page.Plain | replaceRE "(?m)(\\w+:\\/\\/\\S*)" "") }}
+        {{ dict "url" $page.Permalink "content" ($content | htmlUnescape) "title" $page.Title "keywords" (delimit ($page.Params.faq_keywords | default slice) " ") | jsonify }}
+        {{ end }}
+    ]
+}

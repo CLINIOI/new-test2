@@ -1,0 +1,38 @@
+.status-header {
+    margin-bottom: 40px;
+}
+
+.status-item {
+    font-size: 14px;
+
+    margin: 0 0 15px 0;
+    &:last-child {
+    border-bottom: none;
+    }
+
+    .status-date {
+        font-style: italic;
+    }
+
+    .status-ok {
+        color: #339b56;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    .status-warning {
+        color: #dbb20f;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    .status-error {
+        color: #c41515;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    .status-item-content {
+        display: block;
+    }
+}

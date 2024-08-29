@@ -1,0 +1,25 @@
+<section class="section-features">
+  <div class="row feature-top-row">
+    <div class="small-12 columns">
+      <img alt="Photo, vector, video" src="{{ "/images/features/photo-vector-video.svg" | relURL }}">
+      <h2 class="section-title">Photo, vector, video</h2>
+      <p>Xpiks support all your works - photo, vectors and video <br/>
+        Our mission is to provide microstock contributors with the best tool for everyday work
+      </p>
+      <hr/>
+    </div>
+  </div>
+  <div class="row feature-row">
+    {{ range $feature := $.Site.Data.features }}
+    <div class="small-4 columns">
+      <div class="feature-item">
+        <div class="feature-img-w">
+          <img alt="Xpiks feature" src='{{ ( path.Join "/images/features/" $feature.icon) | relURL }}'>
+        </div>
+        <h4>{{$feature.title}}</h4>
+        <p class="content">{{ safeHTML $feature.content }}</p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>

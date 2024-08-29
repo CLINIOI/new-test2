@@ -1,0 +1,59 @@
+<div class="row price-row">
+    <!-- Free plan -->
+    <div class="small-12 medium-centered medium-8 large-uncentered large-4 columns">
+        <div class="price-box-header">&nbsp;</div>
+        <div class="price-box">
+            <p class="plan-name">Basic</p>
+            <p class="plan-price"><span id="free-price-currency" class="plan-currency">€</span><span id="free-price-value" class="plan-value">0</span></p>
+            <p class="price-description">free</p>
+            <div class="price-button">
+                <a class="button black-btn-color plausible-event-name=Download plausible-event-position=pricing" href="{{ "/downloads/" | relURL }}">Download</a>
+            </div>
+            <ul>
+                <li>{{- partial "checkmark" -}} Core features</li>
+                <li>{{- partial "checkmark" -}} Community support</li>
+                <li>{{- partial "checkmark" -}} Limited files</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Pro plan -->
+    <div class="small-12 medium-8 medium-centered large-uncentered large-4 columns">
+        <div class="price-box-header">&nbsp;</div>
+        <div class="price-box">
+            <p class="plan-name">Pro</p>
+            <p class="plan-price"><span id="pro-price-currency" class="plan-currency">€</span><span id="pro-price-value" class="plan-value">45</span></p>
+            <p class="price-description">one-time payment</p>
+            <div class="price-button">
+                <a id="buy-xpiks-pro" class="button black-btn-color" href="#">Buy license</a>
+            </div>
+            <ul>
+                <li>{{- partial "checkmark" -}} <div class="pro-label">PRO</div> features</li>
+                <li>{{- partial "checkmark" -}} Standard support {{- partial "tooltip" (dict "context" . "text" "Valid for 1 year") -}}</li>
+                <li>{{- partial "checkmark" -}} 1 year of unlimited files</li>
+                <li>{{- partial "checkmark" -}} Security updates</li>
+                <li id="renewalFeature" class="wide">{{- partial "checkmark" -}} Optional renewal for <span id="renew-price-currency">€</span><span id="renew-price-value">35</span> {{- partial "tooltip" (dict "context" . "text" "Extend access to unlimited files and support") -}}</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Pro+ plan -->
+    <div class="small-12 medium-centered medium-8 large-uncentered large-4 columns">
+        <div class="price-box-header price-box-header-highlight">Best value</div>
+        <div class="price-box price-box-highlight">
+            <p class="plan-name">Pro+</p>
+            <p class="plan-price"><span id="proplus-price-currency" class="plan-currency">€</span><span id="proplus-price-value" class="plan-value">99</span></p>
+            <p class="price-description" id="billingPeriod">yearly</p>
+            <div class="price-button">
+                <a id="buy-xpiks-pro-plus" class="button main-btn-color" href="#">Buy license</a>
+            </div>
+            <ul>
+                <li>{{- partial "checkmark" -}} <div class="pro-label"><span>PRO</span><span class="pro-plus">+</span></div> features {{- partial "tooltip" (dict "context" . "text" "Reverse image search and PRO features") -}}</li>
+                <li>{{- partial "checkmark" -}} Priority support</li>
+                <li>{{- partial "checkmark" -}} Unlimited files</li>
+                <li>{{- partial "checkmark" -}} All updates {{- partial "tooltip" (dict "context" . "text" "Security and feature updates") -}}</li>
+                <li>{{- partial "checkmark" -}} Access to <strong><a href="/plugins/" target="_blank">all plugins</a></strong> {{- partial "tooltip" (dict "context" . "text" "Automatic keywording, model releases and many more") -}}</li>
+                <li>{{- partial "checkmark" -}} <span id="included-cloud-upload">48 GB</span> of <strong><a href="/cloud-upload/" target="_blank">cloud upload</a></strong> {{- partial "tooltip" (dict "context" . "text" "4 GB / month. Extra available on demand.") -}}</li>
+                <li id="yearlyDiscountFeature">{{- partial "checkmark" -}} Save <strong>35%</strong></li>
+            </ul>
+        </div>
+    </div>
+</div>

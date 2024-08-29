@@ -1,0 +1,9 @@
+{{- if ($.Scratch.Get "downloads_scripts") -}}
+<script defer file-types="dmg,AppImage,exe,zip" data-domain="xpiksapp.com" src="https://stats.intmaker.com/js/script.tagged-events.file-downloads.js"></script>
+{{- else if ($.Scratch.Get "paddle_scripts") -}}
+<!-- replace script to script.tagged-events.revenue.js after Plausible upgrade -->
+<script defer data-domain="xpiksapp.com" src="https://stats.intmaker.com/js/script.tagged-events.js"></script>
+{{- else -}}
+<script defer data-domain="xpiksapp.com" src="https://stats.intmaker.com/js/script.tagged-events.js"></script>
+{{- end -}}
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>

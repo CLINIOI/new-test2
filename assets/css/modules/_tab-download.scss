@@ -1,0 +1,129 @@
+.tab-download-content {
+    max-width: 850px;
+    text-align: center;
+    font-size: 14px;
+    margin: auto;
+    display: none;
+    &.active-tab {
+        display: block;
+    }
+    h2 {
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+    .button {
+        margin-top: 1.5rem;
+        padding: 12px 10px 12px;
+    }
+    .button ~ span {
+        margin-top: 30px;
+        display: block;
+    }
+    @media screen and (min-width: 64.063em) {
+        font-size: 16px;
+        h2 {
+            font-size: $font-size-h1;
+            margin-top: 20px;
+        }
+    }
+    .release-notes {
+        margin-top: 30px;
+        font-size: 14px;
+    }
+}
+
+.section-platforms {
+    background: #fff;
+    text-align: center;
+    .small-12{
+        max-width: none;
+        padding: 0;
+
+    }
+    h2 a {
+        color: $primary-text-color;
+        &:hover {
+            color: $main-btn-hover-bg;
+            text-decoration: none;
+        }
+        &:active {
+            color: $main-btn-active-bg;
+        }
+
+    }
+}
+
+.tabs-os-buttons-wrapper {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 1000px;
+    @media screen and (max-width: 64.063em) {
+        flex-direction: column;
+        width: auto;
+        margin-top: -200px;
+    }
+    .tabs-os-button {
+        background: $light-gray-background;
+        width: 480px;
+        height: 382px;
+        font-size: 16px;
+        cursor: pointer;
+        padding-top: 87px;
+        margin-bottom: 70px;
+        margin-top: -150px;
+        @media screen and (min-width: 64.063em) {
+            font-size: $font-size-h1-small;
+        }
+        @media screen and (max-width: 64.063em) {
+            margin: auto;
+            width: 90%;
+            margin-bottom: 40px;
+            height: auto;
+        }
+        
+        &.active-tab {
+            display: none;
+        }
+        img {
+            max-height: 82px;
+            width: auto;
+            margin: 0 auto 30px;
+            display: block;
+        }
+        &:hover {
+            color: $main-btn-hover-bg;
+        }
+        &:active {
+            color: $main-btn-active-bg;
+        }
+    }
+    .download-button-wrap {
+        display: inline-block;
+        
+        a {
+            display: block;
+            margin-top: 60px;
+            border: 2px solid #000;
+            color: #000!important;
+            font-size: 16px;
+            padding: 12px 68px 12px;
+            @media screen and (max-width: 64.063em) {
+                margin-bottom: 71px;
+            }
+
+            strong {
+                font-weight: 700;
+            }
+        }
+        a:hover{
+            border: 2px solid #2979FF;
+            color:  #2979FF !important;
+            text-decoration: none;
+        }
+        a:active {
+            border: 2px solid #0048C0;
+            color:  #0048C0 !important;
+        }
+    }
+}

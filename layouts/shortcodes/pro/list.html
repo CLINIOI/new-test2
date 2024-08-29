@@ -1,0 +1,26 @@
+<div class="pro-wrapper">
+    {{ range $index, $item := $.Site.Data.proFeatures }}
+    <article class="pro-feature">
+        <div class="row">
+            <div class="medium-6 small-12 columns {{ if (modBool $index 2) }} medium-push-6 {{ end }}">
+                <div class="pro-feature-image">
+                    {{ if $item.url }}<a href="{{ $item.url }}" target="_blank">{{ end }}<img src="{{ $item.image }}" alt="{{ $item.title }}" />{{ if $item.url }}</a>{{ end }}
+                </div>
+            </div>
+            <div class="medium-6 small-12 columns {{ if (modBool $index 2) }} medium-pull-6 {{ end }} pro-content">
+                <div class="pro-feature-title">
+                    <strong>{{ if $item.url }}<a href="{{ $item.url }}" target="_blank" class="block-header-link">{{end}}{{safeHTML $item.title}}{{ if $item.url }}</a>{{end}}</strong>
+                </div>
+                <div class="pro-feature-content">
+                    {{safeHTML $item.content }}
+                </div>
+                {{ if $item.url }}
+                <div class="pro-feature-link">
+                    <a href="{{ $item.url }}" target="_blank" class="links">Learn more</a>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </article>
+    {{ end }}
+</div>

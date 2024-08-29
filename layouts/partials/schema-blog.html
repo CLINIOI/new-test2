@@ -1,0 +1,24 @@
+<script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type": "BlogPosting",
+        "image": {{ (.Param "image") | absURL }},
+        "url": {{ .Permalink }},
+        "dateCreated": "{{ .PublishDate.Format "2006-01-02" }}",
+        "datePublished": "{{ .PublishDate.Format "2006-01-02" }}",
+        "dateModified": "{{ .GitInfo.AuthorDate.Format "2006-01-02" }}",
+        "inLanguage": "{{ .Language.LanguageCode }}",
+        "isFamilyFriendly": "true",
+        "copyrightYear": "{{ .PublishDate.Format "2006" }}",
+        "copyrightHolder": {
+            "@type": "Person",
+            "name": {{ .Param "author" }}
+        },
+        "author": {
+            "@type": "Person",
+            "name": {{ .Param "author" }},
+            "url": "https://xpiksapp.com"
+        },
+        "articleSection": {{ delimit (.Param "categories") ", " }}
+    }
+</script>

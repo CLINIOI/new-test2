@@ -1,0 +1,29 @@
+- title: 'Process all of your files' 
+  color: blue
+  image: '/images/main/cards/photos-vectors-videos.png'
+  text: 'Edit and upload photos, vectors and videos'
+
+- title: 'Cloud and direct upload' 
+  image: '/images/main/cards/ftp-upload.png'
+  color: azure
+  text: 'Upload to any agency via Xpiks Cloud or from your computer'
+
+- title: 'Edit metadata' 
+  image: '/images/main/cards/metadata-editing.png'
+  color: yellow
+  text: 'Edit XMP/IPTC/EXIF metadata'
+ 
+- title: 'Search in files'
+  color: yellow
+  image: '/images/main/cards/search.png'
+  text: 'Advanced search, filtering and find and replace functionality'
+
+- title: 'Ask support' 
+  color: purpure
+  image: '/images/main/cards/support.png'
+  text: 'Excellent support, tutorials and community groups'
+
+- title: 'Check requirements' 
+  color: blue
+  image: '/images/main/cards/requirements-check.png'
+  text: 'Check for potential problems before upload to microstocks'

@@ -1,0 +1,11 @@
+{{ $htmlTable := .Inner | markdownify }}
+
+{{ $special_class := .Get "class" | default "" }}
+
+{{ $old := "<table>" }}
+{{ $new := printf "<table class=\"table mb-0 table-center table-blog\">" }}
+{{ $htmlTable := replace $htmlTable $old $new }}
+
+<div class="table-responsive shadow-md rounded-md {{$special_class}}">
+{{ $htmlTable | safeHTML }}
+</div>

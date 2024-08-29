@@ -1,0 +1,13 @@
+{{ $href := "" }}
+{{ $url := .Get "href" }}
+{{ $relref := .Get "relref" }}
+{{ $title := .Get "title" | default "Read more" }}
+{{ $lang := .Get "lang" | default "en" }}
+
+{{ if $url }}
+    {{ $href = $url }}
+{{ else }}
+    {{ $href = relref . (dict "path" $relref "lang" $lang) }}
+{{ end }}
+
+<a href="{{ $href }}" class="button main-btn-color" target="_blanc">{{ $title | safeHTML }}</a>

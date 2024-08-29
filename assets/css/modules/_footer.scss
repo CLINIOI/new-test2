@@ -1,0 +1,91 @@
+.site-footer {
+    font-size: 18px;
+    background: $dark-bg;
+    clear: both;
+    color: $footer-color;
+    padding: 35px 0;    
+    padding-left:16px;
+    @media screen and (max-width: 64.063em) {
+        padding: 0 0;
+    }
+    @media screen and (min-width: 64.063em) {
+        padding: 50px 0;
+        font-size: 18px;
+    }
+    .footer-nav{
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        width: 90%;
+        @media screen and (max-width: 64.063em) {
+            flex-wrap: wrap;
+        }
+        div{
+            @media screen and (max-width: 64.063em) {
+                width: 50%;
+                margin-top: 76px;
+            }
+            ul{
+                margin-left: 0;
+                a{
+                    font-weight: 700;
+                    color: $navbar-text-color;
+                    margin-bottom: 27px;
+                }
+                li{
+                    margin-bottom: 17px;
+                    font-weight: 400;
+                    display: block;
+                }
+            }
+        }
+        
+    }
+    .copy{
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 64.063em) {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+        
+        .left-copy{
+            @media screen and (max-width: 64.063em) {
+                margin-bottom: 73px;
+            }
+            .darkgray{
+                color: #E0E4EA !important;
+            }
+        }
+        .right-copy{
+            @media screen and (max-width: 64.063em) {
+                justify-content: space-around;
+                display: flex;
+                width: 33%;
+                margin: auto;
+                margin-bottom: 40px;
+            }
+            
+            a{
+                margin-left:23px ;
+                @media screen and (max-width: 64.063em) {
+                    display: block;
+                    margin-left:0;
+                }
+            }
+            a:hover{
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+
+    }
+    .line{
+        background: #3A3B3D;
+        width: 100%;
+        height: 1px;
+        margin-bottom: 41px;
+        margin-top: 20px;
+    }
+}
+

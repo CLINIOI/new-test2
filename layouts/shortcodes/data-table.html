@@ -1,0 +1,23 @@
+{{ $htmlTable := .Inner | markdownify }}
+
+{{ $special_class := .Get "class" | default "" }}
+
+{{ $old := "<table>" }}
+{{ $new := printf "<table class=\"table mb-0 table-center table-data\">" }}
+{{ $htmlTable := replace $htmlTable $old $new }}
+
+{{ $successPattern := printf "<td>\\+(.+)\\+</td>" }}
+{{ $textSuccess := printf "<td><span class=\"text-success\">$1</span></td>" }}
+{{ $htmlTable := replaceRE $successPattern $textSuccess $htmlTable }}
+
+{{ $failurePattern := printf "<td>\\-(.+)\\-</td>" }}
+{{ $textFailure := printf "<td><span class=\"text-danger\">$1</span></td>" }}
+{{ $htmlTable := replaceRE $failurePattern $textFailure $htmlTable }}
+
+{{ $starPattern := printf "(*)" }}
+{{ $starElement := printf "<span class=\"badge bg-success rounded-pill mb-2\">&#x2605;</span>" }}
+{{ $htmlTable := replace $htmlTable $starPattern $starElement }}
+
+<div class="table-responsive shadow-md rounded-md {{$special_class}}">
+{{ $htmlTable | safeHTML }}
+</div>

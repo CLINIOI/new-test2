@@ -1,0 +1,9 @@
+<header class="page-header {{ if $.Page.Params.largeHeader }}header-larger{{ end }}">
+    <img class="page-header-logo" src='{{"/images/logo-big-shadowed.png" | relURL}}' alt="Xpiks">
+    <h1>{{ $.Page.Title }}</h1>
+    <p class="post-categories">
+        {{- range .Sites.First.Taxonomies.categories -}}
+        <a href="{{ .Page.RelPermalink }}">#{{ .Page.Slug }}</a>
+        {{ end }}
+    </p>
+</header>

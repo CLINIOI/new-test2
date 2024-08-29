@@ -1,0 +1,53 @@
+- icon: 'Catalan.jpg'
+  country: 'Catalan'
+
+- icon: 'Czech.jpg'
+  country: 'Czech'
+
+- icon: 'English.jpg'
+  country: 'English'
+
+- icon: 'Estonia.jpeg'
+  country: 'Estonian'
+
+- icon: 'French.jpg'
+  country: 'French'
+
+- icon: 'German.jpg'
+  country: 'German'
+
+- icon: 'Greece.png'
+  country: "Greek"
+
+- icon: 'Hungarian.jpg'
+  country: 'Hungarian'
+
+- icon: 'Indonesian.jpg'
+  country: 'Indonesian'
+
+- icon: 'Italian.jpg'
+  country: 'Italian'
+
+- icon: 'Polish.jpg'
+  country: 'Polish'
+
+- icon: 'Portuguese.jpg'
+  country: 'Portuguese'
+
+- icon: 'Romanian.jpg'
+  country: 'Romanian'
+
+- icon: 'Spanish.jpg'
+  country: 'Spanish'
+
+- icon: 'Swedish.jpg'
+  country: 'Swedish'
+
+- icon: 'Thailand.png'
+  country: "Thai"
+
+- icon: 'Turkish.jpg'
+  country: 'Turkish'
+
+- icon: 'Ukrainian.jpg'
+  country: 'Ukrainian'

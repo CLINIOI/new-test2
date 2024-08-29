@@ -1,0 +1,99 @@
+.section-plugins-title{
+    background: $dark-bg;
+    div {
+        padding: 100px 0px 140px 0;
+        width: 1020px;
+        margin: auto;
+        text-align: left;
+
+        @media screen and (max-width: 64.063em) {
+            text-align: center;
+            width: 100%;
+            padding: 40px 16px 140px 16px ;
+        }
+        h1 {
+            color: #fff;
+        }
+        p {
+            color: #fff;
+        }
+    }
+}
+.plugin-pagination .signle-post-pagination-wrapper{
+    padding: 0;
+}
+.bg_pagination{
+    background: none;
+}
+.section-plugins-card {
+    @media screen and (max-width: 64.063em) {
+        padding: 0 16px;
+    }
+    
+    .flex {
+        display: flex;
+        width: 1020px;
+        margin: auto;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media screen and (max-width: 64.063em) {
+            flex-direction: column;
+            width: 100%;
+            margin-top: -100px;
+        }
+
+        .block {
+            margin-top: -100px;
+            width: 300px;
+            border-radius: 3px;
+            border: 1px solid #E0E4EA;
+            background: #fff;
+            margin-bottom: 160px;
+            padding-bottom: 20px;
+
+            @media screen and (max-width: 64.063em) {
+                margin-bottom: 40px;
+                margin-top: 0;
+                width: 100%;
+            }
+
+            .img {
+                display: block;
+                height: 200px;
+                width: 100%;
+                background: #E0E4EA;
+                overflow: hidden;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            h2,p {
+                margin: 0;
+                padding: 20px 20px 0 20px ;
+                font-size: $font-size-p;
+            }
+
+            .plugin-link {
+                color: $primary-text-color !important;
+            
+                &:hover {
+                    text-decoration: none;
+                    color: $blue-accent-color !important;
+                }
+            }
+
+            .plugin-description {
+                min-height: 90px;
+            }
+        }
+
+        &:after {
+            content: "";
+            width: 300px;
+        }
+    }
+}

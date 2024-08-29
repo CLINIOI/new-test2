@@ -1,0 +1,14 @@
+<div class="faq-wrapper calculator-faq">
+    {{ range .Site.Data.calculatorFaq }}
+    <article class="faq-item">
+        <div class="faq-item-title">
+            <div class="faq-item-icon faq-icon-none"> <svg xmlns="http://www.w3.org/2000/svg" width="11" height="18"><path fill="none" fill-rule="evenodd" stroke="#000000" stroke-width="3" d="M1 1.929L8.071 9 1 16.071"/></svg> </div>
+            {{safeHTML .title}}
+        </div>
+        <div class="faq-item-content">
+            {{safeHTML .content }}
+        </div>
+        <div class="faq-item-icon faq-icon-block"> <svg xmlns="http://www.w3.org/2000/svg" width="11" height="18"><path fill="none" fill-rule="evenodd" stroke="#000000" stroke-width="3" d="M1 1.929L8.071 9 1 16.071"/></svg> </div>
+    </article>
+    {{ end }}
+</div>

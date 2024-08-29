@@ -1,0 +1,35 @@
+<section class="bg-half chart-section">
+    <div class="chart-container">
+        <div class="chart-flex">
+            <div class="chart__form-control">
+                <label for="count" class="chart__label chart__label--blue">Downloads increment</label>
+                <select class="form-select" name="count" id="count">
+                    <option value="50" selected="selected">50</option>
+                    <option value="100">100</option>
+                    <option value="150">150</option>
+                    <option value="200">200</option>
+                    <option value="250">250</option>
+                    <option value="500">500</option>
+                </select>
+            </div>
+            <div class="drag-point-data">
+                <div class="drag-point-data__item">
+                    <div>Month:</div>
+                    <div id="monthValue"></div>
+                </div>
+                <div class="drag-point-data__item">
+                    <div>Downloads:</div>
+                    <div id="countValue"></div>
+                </div>
+            </div>
+            <div class="chart__form-control">
+                <label for="levelLogic" class="chart__label chart__label--red">Photo / Video</label>
+                <select class="form-select" name="levelLogic" id="levelLogic">
+                    <option value="logic1" selected="selected">Photo</option>
+                    <option value="logic2">Video</option>
+                </select>
+            </div>
+        </div>
+        <div id="chart"></div>
+    </div>
+</section>

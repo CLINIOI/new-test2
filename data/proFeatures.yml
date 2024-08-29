@@ -1,0 +1,77 @@
+- title: 'Priority support'
+  image: /images/tutorials/howto/contact-support.gif
+  content: >
+    Professional help is now 1 click away! Ask a question, report an issue or suggest an improvement - all within Xpiks. Available while your license is active.<br /> Users on free plan will only have access to the community support through Google Groups.
+  url: /support/
+
+- title: 'Background upload'
+  image: /images/tutorials/uploading/background-upload.gif
+  content: >
+    Upload your artworks in background while preparing or keywording other files. You can track upload status in the side panel.<br /> Users on free plan will need to wait until upload will finish before editing other files.
+  url: /tutorials/uploading-background/
+
+- title: 'Color tags filtering'
+  image: /images/tutorials/interface/color-tags-filter.gif
+  content: >
+    Filter artworks by color tags that you assigned to them. Allows to create unique personal workflows in Xpiks for example, if you mark ready to upload artworks with green, you can select all ready artworks with a single click.<br /> Users on free plan can assign color tags, but cannot filter them.
+  url: /tutorials/interface-color-tags/
+
+- title: 'Upload history'
+  image: /images/tutorials/uploading/upload-history.gif
+  content: >
+    Xpiks will keep track of where and when you upload artworks. This allows to do really useful things like automatically skipping already uploaded files to the same microstock website.<br />Users on free plan cannot automatically skip duplicate uploads and cannot view artwork upload history.
+  url: /tutorials/uploading-history/
+
+- title: 'Settings sync'
+  image: /images/tutorials/miscellaneous/settings-sync.png
+  content: >
+    Easily synchronize Xpiks settings between different computers via your chosen synchronization method like Dropbox, Jottacloud, Google Drive or simply a network share. Set path to directory and Xpiks will keep your settings in sync.
+  url: /tutorials/misc-settings-sync/
+
+- title: 'Import metadata from CSV'
+  image: /images/tutorials/howto/csv-import-mapping.png
+  content: >
+    Import metadata into your old artworks, share files with other contributors or apply your orders from paid keywording services. Now you can do all of that with importing CSV files with metadata.
+  url: /tutorials/import-csv/
+
+- title: 'Additional file formats'
+  image: /images/pro/svg-support.png
+  content: >
+    Xpiks Pro users can edit and upload <i>"RAW"</i> (supporting all camera formats), <i>PNG</i>, <i>TIFF</i> and <i>SVG</i> files the same way as others. SVG files will be shown with correct thumbnails and you can do everything you can do with other files.
+  url: ""
+
+- title: 'Preset groups'
+  image: /images/tutorials/presets/groups.gif
+  content: >
+    Organize your presets into groups! This saves time when you insert preset using context menu in any of the editing views.
+  url: /tutorials/presets-groups/
+
+- title: 'Custom FTP directories'
+  image: /images/tutorials/uploading/custom-ftp-directory.gif
+  content: >
+    Select any FTP directory on a remote server for upload. Even though Xpiks has a huge list of predefined rules for each microstock, you may need some customization sometimes.
+  url: /tutorials/custom-upload-directory/
+
+- title: 'Restore last session on startup'
+  image: /images/pro/restore-last-session.png
+  content: >
+    Xpiks will open your last opened files and directories in case you are Xpiks Pro user. This allows to start where you left right away without need to manually find last files and directories.<br /> Users on free plan can add last opened files manually.
+  url: ""
+
+- title: 'Batch delete keywords'
+  image: /images/tutorials/howto/delete-keywords.gif
+  content: >
+    Xpiks allows you to do advanced keywording operations like removing several keywords from multiple files simultaneously. You can select proposed common keywords to remove or tune case sensitivity for removal.<br /> Users on free plan can remove keywords manually.
+  url: "/tutorials/keywords-batch-delete/"
+
+- title: 'Custom CSV export values'
+  image: /images/tutorials/howto/custom-csv-property.gif
+  content: >
+    If you need to set a price for the videos during CSV export or just need to add a column with custom value (like a category), Xpiks has a tool for the job.
+  url: "/tutorials/export-csv/#custom-values"
+
+- title: 'Adding Copyright information to photos'
+  image: /images/tutorials/miscellaneous/copyright.png
+  content: >
+    During saving you can optionally add copyright information to all photos. You can find this in <i>File -> Settings -> Metadata</i>.
+  url: "/tutorials/misc-copyright/"

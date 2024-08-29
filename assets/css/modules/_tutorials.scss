@@ -1,0 +1,375 @@
+.tutorials-sidebar {
+    border: 2px solid $secondary-color;
+    margin-bottom: 30px;
+    width: 100%;
+    h3 {
+        font-size: 16px;
+        padding: 12px 23px;
+        margin: 0 2px;
+        position: relative;
+        border-bottom: 2px solid $secondary-color;
+        &:after {
+            content: '';
+            border-bottom: 8px solid $secondary-color;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 8px solid transparent;
+            top: 40%;
+            position: absolute;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            right: 20px;
+        }
+    }
+    &.close {
+        h3 {
+            border-bottom: none;
+            &:after {
+                border-top: 6px solid $secondary-color;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-bottom: 8px solid transparent;
+                top: 60%;
+            }
+        }
+        .tutorial-nav {
+            display: none;
+        }
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+    li, a {
+        display: block;
+        color: #000000;
+        font-weight: bold;
+    }
+    a:hover {
+        background-color: $secondary-color;
+        text-decoration: none;
+    }
+    .tutorial-pro {
+        border-radius: 2px;
+        background: $pro-background-color;
+        vertical-align: middle;
+        padding: 2px 3px;
+        color: #fff;
+        display: inline;
+        font-size: 8px;
+    }
+    .tutorial-nav {
+        margin: 0.5rem 0;
+        font-size: 16px;
+        > li.active > a {
+            position: relative;
+        }
+        > li > a {
+            padding: 7px 25px;
+        }
+    }
+    .tutorial-sub-nav {
+        font-size: 14px;
+        display: none;
+        padding-left: 24px;
+        > li > a {
+            font-weight: 400 !important;
+            padding: 7px 20px 7px 30px;
+            position: relative;
+        }
+        .active a {
+            color: $link-normal-color;
+        }
+            
+           &.topic-open {
+               display: block !important;
+        }
+    }
+    @media screen and (min-width: 64.063em) {
+        border: none;
+
+        h3 {
+            border-bottom: none !important;
+            font-size: $font-size-h1-small;
+            padding-left: 0;
+            margin-left: 0;
+            padding-top: 0;
+            &:after {
+                display: none;
+            }
+        }
+        .tutorial-nav > li > a {
+            padding-left: 0;
+        }
+        .tutorial-sub-nav > li > a {
+            padding-left: 10px;
+        }
+        .tutorial-sub-nav {
+            .active a {
+                &:after {
+                    left: 0;
+                }
+            }
+        }
+        a:hover {
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:active {
+            color: $link-visited-color;
+        }
+        .tutorial-nav {
+            display: block !important;
+        }
+    }
+    @media screen and (min-width: 64.063em) {
+        border-right: 1px solid $secondary-color;
+        padding-bottom: 3rem;
+        max-height: 700px;
+        overflow-y: auto;
+        h3 {
+            margin-top: 16px;
+        }
+    }
+}
+
+.tutorial-content {
+    font-size: 16px;
+    color: $primary-text-color;
+
+    p.tutorial-topic {
+        color: $gray-link-color;
+        font-size: $font-size-p-small;
+        font-weight: bold;
+        margin-bottom: 0px !important;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+    h1 {
+        font-size: $font-size-h1-small;
+        color: $primary-text-color;
+        @media screen and (min-width: 64.063em) {
+            font-size: $font-size-h1;
+        }
+        
+    }
+    h3{
+        @media screen and (max-width: 64.063em) {
+            margin-top: 70px;
+        }
+    }
+    .content-inner {
+        margin-top: 50px;
+        @media screen and (min-width: 64.063em) {
+            margin-top: 100px;
+        }
+    }
+    img {
+        @media screen and (min-width: 64.063em) {
+        }
+        @media screen and (max-width: 64.063em) {
+            margin-bottom: 35px;
+        }
+    }
+    .tutorial-pro {
+        margin-left: 10px;
+        border-radius: 4px;
+        background: $pro-background-color;
+        padding: 3px 4px;
+        color: #fff;
+        display: inline;
+        font-size: 16px;
+        vertical-align: middle;
+    }
+    h2, h3 {
+        position: relative;
+    }
+    .tutorials-hash-link {
+        -webkit-transform: translateX(-100%);
+        color: $primary-color;
+        left: 0;
+        opacity: 0;
+        padding: 2px 5px;
+        position: absolute;
+        transform: translateX(-100%);
+        transition: opacity .1s ease-in;
+        will-change: transform, opacity;
+    }
+    h2:hover,
+    h3:hover {
+        .tutorials-hash-link {
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+}
+.button-nav-bottom{
+    width: 63.667%;
+    height: 30px;
+    margin-left: 31%;
+    @media screen and (max-width: 64.063em) {
+        width: 62.667%;
+        height: 30px;
+        margin-left: 35%;
+    
+    }
+    @media screen and (max-width: 40.063em) {
+        width: 100%;
+        height: 30px;
+        padding: 0 16px;
+        margin: 0;
+    }
+    .left{
+        display: flex;
+
+        .arrow{
+            display: block;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #E0E4EA;
+            padding: 1px 0px 0px 7px;
+
+            svg {
+                transform: rotate(180deg);
+                line-height: 30px;
+            }
+        }
+
+        a{
+            color: #9297A1;
+            text-decoration: none;
+            margin-left: 10px;
+            line-height: 34px;
+        }
+    }
+
+    .right{
+        display: flex;
+
+        .arrow{
+            display: block;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #E0E4EA;
+            padding: 1px 0px 0px 10px;
+            svg {
+            }
+        }
+
+        a{
+            color: #9297A1; 
+            text-decoration: none;
+            margin-right: 10px;
+            line-height: 34px;
+        }
+    }
+
+    .left:hover, .right:hover {
+        a {
+            color: $link-color;
+        }
+
+        .arrow {
+            border-color: $link-color;
+        }
+
+        svg {
+            path {
+                stroke: $link-color;
+            }
+        }
+    }
+}
+.tutorial-overview-list {
+    padding-left: 0;
+    margin-left: 0;
+
+    .tutorial-overview-item {
+        display: inline;
+        border-style: solid;
+        border-width: 1px;
+        border-color: $light-gray-background;
+        background: $light-gray-background;
+        width: 293px;
+        margin: 20px;
+        height: 60px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+
+        svg {
+            margin-left: auto;
+        }
+        h3 {
+            margin: 0px !important;
+            font-size: 16px;
+            font-weight: 700;
+            color: $primary-text-color;
+        }
+
+        &:hover {
+            border-color: $link-color;
+            h3 {
+                color: $link-color;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 64.063em) {
+    .section-tuts {
+        > .row {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-pack: stretch;
+            -ms-flex-pack: stretch;
+            justify-content: stretch;
+        }
+        .columns:first-child {
+            margin: 0;
+            float: none;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-pack: stretch;
+            -ms-flex-pack: stretch;
+            justify-content: stretch;
+        }
+    }
+}
+.active-sub-icon{
+    border: solid black;
+    border-width: 0 2px 2px 0 !important;
+    display: inline-block;
+    padding: 3px !important;
+    transform: rotate(45deg !important);
+    -webkit-transform: rotate(45deg) !important;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    margin-right: 10px; 
+}
+.no-active-icon{
+    border: solid #000;
+    border-width: 0 0 2px;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(0);
+    margin-left: 3px;
+    margin-bottom: 5px;
+    margin-right: 10px; 
+}

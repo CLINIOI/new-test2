@@ -1,0 +1,15 @@
+- title: "Tutorials"
+  href: "/tutorials/"
+  hasMenu: true
+
+- title: "Plugins"
+  href: "/plugins/"
+  hasMenu: false
+
+- title: "Blog"
+  href: "/blog/"
+  hasMenu: false
+
+- title: "Pricing"
+  href: "/pricing/"
+  hasMenu: false

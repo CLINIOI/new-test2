@@ -1,0 +1,9 @@
+<p class="rendered-image" style="text-align: center;">
+  {{ if .Title }}
+    <img src="{{ .Destination | safeURL }}" loading="lazy" alt="{{ .Text }}" />
+    <br />
+    <span class="imagecaption"><i>{{ .Title }}</i></span>
+  {{ else }}
+    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy" />
+  {{ end }}
+</p>

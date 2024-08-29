@@ -1,0 +1,30 @@
+{{ $related := (where (.Sites.First.RegularPages.Related .) "Type" "blog") | first 3 }}
+
+<div class="blog-block">
+    <div class="row">
+        <h2>{{ i18n "see_also" . }}</h2>
+        <div class="blog-pager-flex">
+            {{ range $related }}
+            <div class="block card-block">
+                {{ if .Param "image" }}
+                <div class="img">
+                    <a href="{{ .RelPermalink }}">
+                        <img src="{{ .Param "image" | relURL }}" />
+                    </a>
+                </div>
+                {{ else }}
+                <div class="img-placeholder"></div>
+                {{ end }}
+                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                {{- $about := (.Content | plainify | htmlUnescape ) -}}
+                {{- $about = (replaceRE "(?m)(\\r|\\n)" " " $about) -}}
+                {{- $about = (replaceRE " +"    " " $about) -}}
+                {{- $about = (replaceRE "^ +"  ""  $about) -}}
+                {{- $about = (replaceRE " +$"  ""  $about) -}}
+                {{- $about = (truncate 140  " ..."  $about) -}}
+                <p>{{ $about }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>

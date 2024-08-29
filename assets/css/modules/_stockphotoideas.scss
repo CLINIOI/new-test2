@@ -1,0 +1,146 @@
+//Table
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.table-data {
+    --bs-table-bg: transparent;
+    --bs-table-striped-color: #212529;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #212529;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #212529;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 100%;
+    //margin-bottom: 1rem;
+    color: #212529;
+    vertical-align: top;
+    border-color: #dee2e6;
+}
+
+.table-data thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    text-align: left;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.table-data thead tr th {
+    border-bottom: 1px solid #e9ecef !important; 
+}
+
+.spi {
+    .table-data thead tr th:nth-of-type(2) {
+        min-width: 250px;
+    }
+
+    .table-data thead tr th:nth-of-type(3) {
+        width: 120px;
+    }
+
+    .table-data thead tr th:nth-of-type(4) {
+        width: 100px;
+    }
+
+    .table-data thead tr th:nth-of-type(5) {
+        width: 100px;
+    }
+
+    .table-data tbody tr td a {
+        line-height: 1.5;
+        font-weight: 400 !important;
+        font-size: 20px !important;
+        vertical-align: middle;
+        color: #0d6efd;
+    }
+}
+
+.table-data tbody tr td .badge {
+    margin-left: 5px;
+    font-size: 16px !important;
+    padding: 0px 3px 2px 3px !important;
+}
+
+.table-data {
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.table-data > :not(caption) > * > * {
+    padding: .5rem .5rem;
+}
+
+.shadow-md {
+    box-shadow: 0 5px 13px rgba(60,72,88,.2) !important;
+}
+
+.rounded-md {
+    border-radius: 10px !important;
+}
+
+.bg-white {
+    background-color: #fff !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.star {
+    font-size: 18px;
+    padding: 0px 4px;
+}
+
+.text-success {
+    color: #2eca8b !important;
+}
+
+.text-danger {
+    color: #e43f52 !important;
+}
+
+.badge {
+    letter-spacing: .5px;
+    font-weight: 600;
+    line-height: 11px;
+    font-size: .75em;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    padding: 4px 8px;
+}
+
+.bg-success {
+    background-color: #2eca8b !important;
+}
+
+.rounded-pill {
+    border-radius: 50rem !important;
+}
+
+.mb-2{margin-bottom:.5rem!important}
+
+//Badges
+.badge {
+    letter-spacing: 0.5px;
+    padding: 4px 8px;
+    font-weight: 600;
+    line-height: 11px;
+    &.badge-link {
+        &:hover {
+            color: $white !important;
+        }
+    }
+}
+
+.post-content {
+    .badge {
+        padding: 0px 3px 2px 3px !important;
+    }
+}

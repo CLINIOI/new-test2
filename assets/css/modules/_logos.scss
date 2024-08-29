@@ -1,0 +1,45 @@
+.section-logos {
+    padding: 3em 0 2em;
+    text-align: center;
+    background: $dark-bg;
+    @media screen and (min-width: 64.063em) {
+        padding: 2em 0 6em;
+
+    }
+    @media screen and (max-width: 64.063em) {
+        display: none;
+    }
+    .section-title {
+        text-transform: uppercase;
+        font-size: 16px;
+        color: $btn-bg-grey-color;
+        font-weight: normal;
+    }
+    hr {
+        margin-top: 30px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .logos-row {
+        margin-top: 25px;
+
+        img {
+            opacity: 0.5;
+        }
+    }
+}
+
+.stock-item {
+    width: 20%;
+    min-height: 75px;
+    @media screen and (min-width: 64.063em) {
+        &:nth-child(1){
+            text-align: left;
+        }
+        &:nth-child(4){
+            text-align: right;
+        }
+
+    }
+}

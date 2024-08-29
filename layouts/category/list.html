@@ -1,0 +1,38 @@
+{{ define "main" }}
+{{- partial "header.html" . -}}
+<div class="post-list-wrapper">
+  <div class="post-pager-flex">
+      {{ range $page := .Pages }}
+      <div class="block card-block">
+        {{ if .Param "image" }}
+        <div class="thumbnail-container">
+          <a href="{{ $page.RelPermalink}}">
+            <img src="{{ (.Param "image") | relURL }}">
+          </a>
+        </div>
+        {{ else }}
+        <div class="img-placeholder"></div>
+        {{ end }}
+        <p class="date-full"><span style="text-align: left;">{{ dateFormat "January 2, 2006" $page.Date }}</span>{{ if .Param "author" }}<span style="float: right">by {{ .Param "author" }}{{ end }}</span></p>
+        <h2 class="post-title"><a class="post-link" href="{{ $page.RelPermalink}}">{{ $page.Title }}</a></h2>
+        <div class="post-content">
+            {{- $about := $page.Content -}}
+            {{- $about = (replaceRE "(?s:<blockquote>.*?</blockquote>)" "" $about) -}}
+            {{- $about = (replaceRE "(?s:<div class=\"table-of-contents\">.*?</div>)" "" $about) -}}
+            {{- $about = ($about | plainify | htmlUnescape ) -}}
+            {{- $about = (replaceRE "(?m)(\\r|\\n)" " " $about) -}}
+            {{- $about = (replaceRE " +"    " " $about) -}}
+            {{- $about = (replaceRE "^ +"  ""  $about) -}}
+            {{- $about = (replaceRE " +$"  ""  $about) -}}
+            {{- $about = (truncate 250  " ..."  $about) -}}
+            {{ $about }}
+        </div>
+        <div class="read-more"><a href="{{ $page.RelPermalink}}" class="link-with-arrow">Read more {{- partial "arrow-right" -}}</a></div>
+      </div>
+      {{end}}
+  </div>
+</div>
+{{ end }}
+
+{{- define "body_class" -}} page-blog {{- end -}}
+{{- define "content_class" -}} main-content-white {{- end -}}

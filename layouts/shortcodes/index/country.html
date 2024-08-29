@@ -1,0 +1,11 @@
+<section class="section-country">
+    <h2>Xpiks speaks your language (and 18 others too)</h2>
+    <div class="country row">
+        {{ range $country := $.Site.Data.country }}
+        <div class="card">
+            <img class="img" src="{{(path.Join "/images/country" $country.icon ) | relURL}}" alt="">
+           <p>{{$country.country}}</p>
+        </div>
+        {{ end }}
+    </div>
+</section>

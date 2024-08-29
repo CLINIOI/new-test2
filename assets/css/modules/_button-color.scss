@@ -1,0 +1,56 @@
+.main-btn-color{
+    color: #FFFFFF !important;
+    background: $main-btn-normal-bg !important;
+    border: 2px solid $main-btn-normal-bg;
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        background: $main-btn-hover-bg !important;
+        border: 2px solid $main-btn-hover-bg;
+    }
+    &:visited {
+        color: #FFFFFF !important;
+    }
+    &:active {
+        border: 2px solid $main-btn-active-bg;
+        background: $main-btn-active-bg !important;
+        color: $main-btn-active-text !important;
+    }
+}
+.white-btn-color{
+    color: $white-btn-normal-text;
+    background: none;
+    border: 2px solid $white-btn-normal-bg;
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        color: $white-btn-hover-text !important;
+        border: 2px solid $white-btn-hover-bg;
+    }
+    &:visited {
+        color: $white-btn-normal-text;
+    }
+    &:active {
+        color: $white-btn-active-text;
+        border:2px solid $white-btn-active-bg;
+    }
+}
+.black-btn-color{
+    // line-height: 1px;
+    color: $black-btn-normal-text !important;
+    background: none;
+    border:2px solid $black-btn-normal-bg ;
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        color: $black-btn-hover-text !important;
+        border:2px solid $black-btn-hover-bg ;
+    }
+    &:visited {
+        color: #FFFFFF;
+    }
+    &:active {
+        color: $black-btn-active-text !important;
+        border:2px solid $black-btn-active-bg;
+    }
+}

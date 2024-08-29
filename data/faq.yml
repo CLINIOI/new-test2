@@ -1,0 +1,380 @@
+- title: 'Cannot get past health reports screen or other scaling problems on Windows'
+  anchor: cannot-past-health-report
+  topic: 'Windows'
+  content: >
+    Sometimes Xpiks is not correctly scaled on Windows because both Xpiks and Windows use different interface scaling techniques. Open <strong>Windows settings</strong>, section Display and look for <strong>Change the size of apps and text on main display</strong>. The dropdown will contain 100%, 125% and so on. To fix the problem select 100% or 200% value, open Xpiks and you will be able to pass the license window. You can revert Windows setting back after this.
+
+- title: 'Xpiks window is blanc white, cannot be found or size of the interface is wrong on Windows'
+  anchor: windows-blanc-white
+  topic: 'Windows'
+  content: >
+    Most probably this issue can be fixed by changing DPI settings of the app. Find <code class="highlighter-rouge">Xpiks.exe</code> file, right click it, select Properties > Compatibility > Change high DPI settings > tick Override high DPI scaling behavior > select Application in drop down and OK then Apply.
+
+- title: 'Program closes and nothing happens after hitting Upgrade'
+  anchor: windows-upgrade-nothing
+  keywords: ['update', 'version', 'install', 'xpiks', 'click', 'upgrade', 'closes', 'nothing', "can't", 'not']
+  topic: 'Windows'
+  content: >
+    If, after hitting update button, main window closes and nothing else happened it means that Xpiks could not start the installer. It might be caused by antivirus blocking the installer to run or domain policy of your Windows computer. In order to upgrade Xpiks please uninstall it and install the new version manually.
+
+- title: 'Cannot login to Adobe Stock (aka Adobe connection is always red)'
+  topic: 'Upload'
+  anchor: cannot-login-adobe-stock
+  keywords: ["can't", 'adobe', 'stock', 'connecting', 'login', 'not', 'connect', 'connection', 'red', 'problem']
+  content: >
+    Adobe stock uses a <i>different</i> username and password than you use to login to the website and only "qualified" accounts can upload via FTP. Check our <a href="/tutorials/uploading-credentials/#adobe-stock">step-by-step guide</a> for details. In short, go to <a target="_blank" href="https://contributor.stock.adobe.com/en/uploads?upload=1">Adobe contributor portal</a>, click "Upload" in top right corner and just below the upload icon and text "You can also import files using your SFTP" you will see "Learn more" link. When you click it, you will see your username and password.
+
+- title: 'Cannot login to Dreamstime'
+  topic: 'Upload'
+  anchor: cannot-login-dreamstime
+  content: >
+    Dreamstime uses a <i>different</i> username and password than you use to login to the website. Check our <a href="/tutorials/uploading-credentials/#dreamstime">step-by-step guide</a> how to get them. In short, go to <a target="_blank" href="https://www.dreamstime.com/upload/help-ftp-upload">FTP uploads area</a> and copy your user ID from "FTP Details" section on the right.
+
+- title: 'Which microstock agencies does Xpiks support?'
+  topic: 'Upload'
+  anchor: supported-agencies
+  content: >
+    With Xpiks you can upload your files to <i>any agency that supports FTP/FTPS/SFTP</i> upload. This also includes custom/private servers with FTP support.
+
+- title: >
+    There's no connection even though I entered correct username and password
+  anchor: correct-username-password
+  topic: 'Upload'
+  content: >
+    Moved <a href="/faq#cannot-upload-correct">here</a>.
+
+- title: 'Cannot upload although my username and password are correct'
+  topic: 'Upload'
+  anchor: cannot-upload-correct
+  keywords: ['stock', 'upload', 'connection', 'trying', 'connect', 'xpiks', 'tried', "don't", 'not', 'keeps', 'saying', 'correct', 'wrong', 'accounts', 'credentials']
+  content: >
+    Usually you cannot connect to FTP or upload a file when your username and password are <strong>actually</strong> wrong. This can happen if a) you need a <strong>different</strong> username and password for FTP access than you use to login to the website portal; b) you made a typo in your username or password (you can check it using "Show password").
+
+- title: 'Does Xpiks support uploading to Getty/iStock?'
+  topic: 'Upload'
+  anchor: upload-getty-istock
+  content: >
+    Currently Xpiks does not support direct uploading to Getty/iStock because they do not allow any third-party applications. In order to upload to Getty/iStock, you can only use DeepMeta and qHero, however you can prepare metadata for your files in Xpiks.
+
+- title: 'Xpiks Cloud upload is disabled or not available'
+  topic: 'Xpiks Cloud'
+  anchor: cloud-upload-not-available
+  keywords: []
+  content: >
+    There could be two reasons: 1) Cloud upload is not available during Pro+ trial, you need to be a paying customer to use it; 2) Your <a href="/cloud-upload#total-upload-size">total upload size</a> is less than 300 MB, in which case Xpiks uploads your files directly to the agency's FTP server.
+
+- title: 'Cannot use Cloud Upload with Pro+ trial'
+  topic: 'Xpiks Cloud'
+  anchor: cloud-upload-trial
+  keywords: []
+  content: >
+    Currently Cloud Upload is not available while you have Xpiks Pro+ trial. In order to use Cloud Upload you need to be subscribed to one of Xpiks Pro+ plans. We are working to lift this requirement in future.
+
+
+- title: 'Xpiks window is black on macOS'
+  anchor: window-black-macos
+  topic: 'macOS'
+  content: >
+    There's a known issue in macOS below 10.14.4 that causes certain application to show up as black. In order to fix this consider upgrading to 10.14.4 or fresher version of macOS.
+
+- title: 'Does Xpiks work on Apple Silicon Macs'
+  anchor: xpiks-m1-macos
+  topic: 'macOS'
+  content: >
+    <i>Short answer</i>: <strong>Yes</strong>. <i>Long answer</i>: while Xpiks is not built natively for Apple Silicon (processors M1, M2 etc.), it works through emulation layer called <a target="_blank" href="https://support.apple.com/en-us/HT211861">Rosetta</a>. Your macOS will offer you to install Rosetta first time you will open Xpiks.
+
+- title: 'All .xpks files are gone'
+  anchor: all-xpks-files-gone
+  topic: 'Miscellaneous'
+  content: >
+    Xpiks used to save temporary backups in .xpks files. As of version 1.5 and higher this is no longer the case as backups are saved in one local database instead of multiple files. So don't worry if they are gone, your data is still securely saved in images/vectors//videos and backed up as you work.
+
+- title: 'Uploaded videos do not contain Keywords and Description'
+  anchor: videos-dont-contain-keywords
+  keywords: ['problem', 'metadata', 'videos', 'uploading', 'only', 'issue', 'video', 'not', 'description', 'any', 'upload', 'uploaded', 'all', 'keywords', 'problems', "doesn't", 'clips', 'tags', 'title']
+  topic: 'Metadata'
+  content: >
+    Currently only Adobe Stock reads embedded metadata from videos. Other microstocks require you to fill it by hand on website or upload <i><a href="/tutorials/export-csv/">separate CSV file</a></i> with metadata.
+
+- title: 'Shutterstock, Depositphotos and Dreamstime do not recognize metadata in video'
+  anchor: recognize-video-metadata
+  topic: 'Metadata'
+  content: >
+    Currently only Adobe Stock reads embedded metadata from videos. Other microstocks require you to fill it by hand on website or upload <i><a href="/tutorials/export-csv/">separate CSV file</a></i> with metadata.
+
+- title: 'How to sort keywords alphabetically'
+  anchor: sort-keywords
+  topic: 'Metadata'
+  content: >
+    Sorting can be done via <i><a target="_blank" href="/plugins/extended-editing-plugin/">Extended Editing plugin</a></i>, although there's usually no need to do it for microstocks.
+
+- title: 'Automatic update in Windows is stuck on "Updating components"'
+  anchor: automatic-update-stuck
+  topic: 'Windows'
+  content: >
+    This was <a target="_blank" href="https://gitlab.com/ribtoks/ministaller/issues/1">a known issue</a> in the installer which is fixed in newer versions (with Xpiks 1.5 and higher). For now just kill the "ministaller.exe" process in Task Manager and install new Xpiks manually.
+
+- title: 'How to install Xpiks on Windows?'
+  anchor: how-to-install-windows
+  topic: 'Windows'
+  content: >
+    Xpiks has an installer for Windows since version 1.6.0. Check out <a href="/tutorials/misc-install-windows/">this tutorial</a> for details.
+
+- title: >
+    Xpiks can't be opened because it is from an unidentified developer
+  anchor: macos-unidentified-developer
+  topic: 'macOS'
+  content: >
+      Xpiks is signed and notarized by Apple from version 1.5.5.2. If you have a lower version, please upgrade and you will not see this error.
+
+- title: '"Import/Export finished with errors. See logs for details."'
+  anchor: import-finished-with-errors
+  topic: 'Metadata'
+  content: >
+    Usually this error happens in the older versions of Xpiks. Make sure you use the <a href="/downloads/">latest Xpiks</a>. Previously this error happened if Xpiks could not find Exiftool.
+
+- title: 'What does it mean: "Copy description to empty title"?'
+  anchor: copy-description-empty-title
+  keywords: ['title', 'title']
+  topic: 'Metadata'
+  content: >
+    Usually microstock agencies require Title, Description and Keywords to be filled in. If you left the Title empty, Xpiks gives you an option to simply copy Description field to Title during saving the files.
+
+- title: 'CSV file is missing filename column'
+  anchor: csv-no-filename-column
+  topic: 'Metadata'
+  content: >
+    In order to import metadata to correct files, Xpiks uses file name to match records. CSV file has to contain a column that has file names matching the actual files for import to succeed. This column can be named <i>"filename"</i>, <i>"file name"</i> or <i>"file"</i>.
+
+- title: 'CSV file has incorrect format'
+  anchor: csv-bad-format
+  topic: 'Metadata'
+  content: >
+    CSV files have certain rules of how they should be structured. For example: number of values in each row should correspond to the number of columns in header, all text with spaces has to be surrounded by quotes (") and all quotes have to have a match. You can check your file for correctness in Numbers on macOS, OpenOffice Calc or Excel on Windows.
+
+- title: >
+    I can't upload via FTP to my favorite stock XYZ
+  anchor: cannot-upload-to-microstock
+  topic: 'Upload'
+  content: >
+    First of all, check if you didn't make a typo in a Host, Username and Password field. Use "Show Password" checkbox to see if you typed it correctly. Try to use "Test connection" button before upload and see if it works. Try to login with and without Passive Mode (in the Advanced tab). Read help in your stock XYZ about how to upload artworks. Try <a href="/tutorials/uploading-troubleshoot/">Upload troubleshooting</a>.
+
+- title: >
+    Warning "Filename contains special characters or spaces"
+  anchor: upload-warning-special-characters
+  keywords: ['warning', 'contains', 'special', 'uploaded', 'name', 'spaces']
+  topic: 'Upload'
+  content: >
+    If you get this warning it means that your filename contains some characters that are not latin letters or digits. It does not prevent the file to be uploaded, because Xpiks will make sure that filename of the uploaded file will be accepted by the destination agency FTP.
+
+- title: >
+    Xpiks adds number "1" to all video file names after upload
+  anchor: video-number-1
+  topic: 'Upload'
+  keywords: ['file', 'file', 'all']
+  content: >
+    During uploading Xpiks makes sure that destination agency FTP server will accept your file. If your file name contains spaces or special characters, Xpiks will replace them to compliant characters and append a number to the end to make file name unique. If you are exporting metadata in CSV, make sure to <a href="/tutorials/export-csv/#video-upload">use [Upload Filename]</a> as a column.
+
+- title: >
+    What is a Master Password?
+  anchor: master-password
+  topic: 'Upload'
+  content: >
+    Usernames and password from microstock agencie's FTP servers are stored encrypted on disk. They are encrypted with a password that Xpiks chose. "Master password" allows you to encrypt them with your own password.
+
+- title: >
+    Xpiks does not show any upload history
+  anchor: no-upload-history
+  keywords: ['xpiks', 'upload', 'history', 'assets', 'uploaded', 'not', 'after', 'uploading']
+  topic: 'Upload'
+  content: >
+    Most probably you turned off upload history. Go to <i>Settings -> Upload</i> config configure Upload History to keep last 90 days.
+
+- title: >
+    Upload to Freepik does not work
+  anchor: freepik-upload-fail
+  topic: 'Upload'
+  content: >
+    Freepik requires you to have at least 500 files with them before you can upload via FTP. After this you need to use a different password for FTP upload that you can get in the Freepik portal. Read more on the <a target="_blank" href="https://support.freepik.com/s/article/FTP-upload-method?language=en_US">official website</a>.
+
+- title: >
+    Skipped all files as they were recently uploaded
+  anchor: upload-skipped
+  keywords: ['uploaded', 'upload', 'message', 'all', 'files', 'recently']
+  topic: 'Upload'
+  content: >
+    Xpiks tries to save you from uploading files that you have recently (configured in settings) uploaded in order not to produce duplicates. In order to force the upload open <i>"More"</i> menu and uncheck <i>"Skip recently uploaded files"</i>. See <a href="/tutorials/uploading-history/#upload-duplicates">upload history tutorial</a>.
+
+- title: >
+    I cannot upload my videos to Alamy
+  anchor: video-upload-to-alamy
+  topic: 'Upload'
+  content: >
+    If you video uploads to Alamy fail, this is expected. At this time Alamy does not support video on their platform and via FTP upload.
+
+- title: 'Autocompletion does not work though "Autocomplete keywords" option is ON'
+  anchor: autocompete-does-not-work
+  topic: 'Miscellaneous'
+  content: >
+    Please check if you have Xpiks "installed" in some sort of cloud storage like Google Drive, Dropbox etc. Move it to the local hard drive (it "weights" nothing anyway) and try again. Go to support if the problem persists.
+
+- title: 'Replace misspelled keywords does nothing'
+  anchor: replace-misspelled-does-nothing
+  topic: 'Miscellaneous'
+  content: >
+    If you happen to have two keywords in your list, say, <i>"colour"</i> and <i>"color"</i> and then you hit "Fix spelling", select <i>"colour"</i> -> <i>"color"</i> and hit "Replace". When Xpiks tries to replace <i>"colour"</i> to <i>"color"</i> (as you chose) it sees that you already have <i>"color"</i> and replacement will create two <i>"color"</i> keywords. There is an ambiguity in this situation since it's not clear if you were to remove the misspelled word or the original duplicate of it so Xpiks leaves everything as is.
+
+- title: 'What files does Xpiks support?'
+  anchor: xpiks-files-support
+  topic: 'Miscellaneous'
+  content: >
+    Xpiks supports Images (JPEG, TIFF, PNG), "RAW" photos (CR2, CR3, CRW, RAF, NEF, NRW, DNG, RW2, SRW, ARW, SRF, SR2, ORF), Vectors (AI, EPS, SVG) and Videos (AVI, MOV, MPEG, MP4, QT, ASF). Please note that "RAW" photos as well as PNG, TIFF and SVG are only supported with a license.
+
+- title: 'Xpiks closes shortly after start in Windows'
+  anchor: xpiks-closes-after-start
+  topic: 'Windows'
+  content: >
+    It's possible that your antivirus (Avast?) detected Xpiks as malware and quarantined it.
+
+- title: 'Interface is too small or application does not look right'
+  anchor: text-looks-small-windows
+  keywords: ['xpiks', 'screen', 'how', 'everything', 'small', 'text', 'options']
+  topic: 'Windows'
+  content: >
+    1. Press "windows" button, search for "environmental variables", select "Edit system environmental variables".
+    2. In the upper section "Add new variable". For a variable name use <code class="highlighter-rouge">QT_SCALE_FACTOR</code> and for it's value use "2" (without quotes as well). Press "Ok", "Apply" or what ever you need to save and quit.
+    3. Open Xpiks
+
+- title: 'Images get corrupted and Windows Defender reports Xpiks as a virus'
+  anchor: defender-corrupted-files
+  topic: 'Windows'
+  keywords: ['antivirus']
+  content: >
+    If Xpiks "corrupts" your files and at the same time you get the warning from your antivirus, then the corruption happens precisely because Xpiks is terminated by the antivirus during saving your files (it's mistaken for the software that encrypts your hard drive). Whitelist Xpiks in your antivirus and the problem should go away.
+
+- title: 'Can Xpiks play video during keywording?'
+  anchor: xpiks-play-video
+  topic: 'Miscellaneous'
+  keywords: ['out']
+  content: >
+    Currently we do not plan to support video playback from within Xpiks, but you can open the file with your default video player at any time by clicking the 3 dots menu (or right click the thumbnail) and select "Open".
+
+- title: 'Does Xpiks support Editorial photo or video?'
+  anchor: xpiks-editorial
+  keywords: ['editorial', 'editorial', 'files']
+  topic: 'Miscellaneous'
+  content: >
+    You can open, edit and upload editorial content the same way as any other content. However, you cannot mark a file as editorial because this information cannot be embedded as a metadata that is read by all microstocks.
+
+- title: 'Cannot install plugins with Pro license'
+  anchor: plugins-pro-license
+  topic: 'Plugins'
+  content: >
+    Plugins are only available in the Pro+ plan. Please check <a href="/pricing/">pricing page</a> for details.
+
+- title: 'Failed to download selected plugin'
+  anchor: plugin-download-failed
+  topic: 'Plugins'
+  content: >
+    This error might happen if you use not the latest version of Xpiks. Please make sure to install the <a href="/downloads/">latest Xpiks</a>.
+
+- title: 'All plugins do not work'
+  anchor: plugins-do-not-work
+  topic: 'Plugins'
+  keywords: ['subscriber', 'working', 'none']
+  content: >
+    It is most likely that plugins are deactivated (it happens when your trial or license expires). Go to <code>Tools -> Plugins -> Plugin Manager</code> and enable plugins.
+
+- title: 'What is the difference between Pro and Pro+ license?'
+  anchor: pro-proplus-difference
+  topic: 'License'
+  content: >
+    The main difference from <i>features</i> perspective is that Pro+ license gives you access to <a href="/plugins/">plugins</a> and <a href="/cloud-upload/">cloud upload</a> while Pro license does not. The difference from <i>payment</i> perspective is that Pro+ license is a subscription (with monthly and yearly plan) and Pro license is a one-time purchase product. Please check the <a href="/pricing/">pricing</a> page for details.
+
+- title: 'License is activated but Pro functionality disabled'
+  anchor: activated-pro-disabled
+  keywords: ['image', 'search', 'license', 'pro', 'key', 'reverse', 'not', 'access', "can't", 'use', 'function', 'functions', 'plugin']
+  topic: 'License'
+  content: >
+    If you mean that installing plugins or reverse image search is disabled, then this is expected as they are only available in Pro+ plan. Otherwise please <a href="/support/">contact support</a>.
+
+- title: 'What happens if I owned a Pro license before buying Pro+?'
+  anchor: proplus-after-pro
+  topic: 'License'
+  content: >
+    Pro license comes with Pro features forever. It means if you stop your Pro+ subscription, you will have same Pro feature that you had before buying Pro+.
+
+- title: 'What is the Pro+ cancellation policy?'
+  anchor: cancellation-policy
+  topic: 'License'
+  content: >
+    You can cancel your Pro+ license at any time using the app <i>Tools -> License -> Cancel subscription</i>. The cancellation will be effective starting with the next billing cycle (e.g. next month for a monthly subscription). There's no termination fee.
+
+- title: 'What is an optional Pro license renewal?'
+  anchor: pro-license-renewal
+  keywords: ['pro', 'time', 'payment', 'renewal', 'what', 'mean', 'optional', 'not']
+  topic: 'License'
+  content: >
+    Xpiks Pro license comes with unlimited files and support package that are valid for 1 year. After the license expiration you will still have access to all <a href="/pro-features/">Pro features</a> that were available when you purchased your license. However, you have access to priority support, app upgrades and unlimited files <b>only</b> while your license is valid. To continue having these features, you will need to renew your license. By renewing your license you are making work on Xpiks possible that will make you more successful.
+
+- title: 'Sorry, could not verify this license'
+  anchor: could-not-verify-license
+  keywords: ['license', 'license']
+  topic: 'License'
+  content: >
+    Most probable reasons why you're seeing this: 1. Typo in the email or license key (use copy and paste, do not type over); 2. Out of free devices - Pro license can be activated on 1 device and Pro+ on up to 3 devices. You can always unlink an unused device (via menu Tools -> License -> Delete license); 3. Your country or ISP might be blocked from using either Xpiks or Amazon Web Services website. Check more how to activate your license <a href="/tutorials/activate-license/">here</a>.
+
+- title: 'Can I downgrade from Pro+ license to Pro?'
+  anchor: pro-plus-downgrade-pro
+  topic: 'License'
+  keywords: ['license', 'license']
+  content: >
+    You can downgrade by opening menu <i>"Tools -> License -> Cancel subscription"</i> and then selecting <i>"Switch to Pro"</i> (first choice). You will need to finish the process in your browser, after which you will receive an email with a usual Pro license and your Pro+ license will be automatically cancelled. Alteratively you can contact support and we will help you.
+
+- title: 'How many computers can I use my license with?'
+  anchor: many-computers-license
+  topic: 'License'
+  keywords: ['license', 'license']
+  content: >
+    You can use your license on 3 computers at the same time with Pro+ license and 1 computer with Pro license. In order to detach a license from the computer that you will no longer use, open <i>Tools -> License -> Delete license</i>.
+
+- title: 'I paid for the license but did not receive it'
+  anchor: not-receive-license
+  keywords: ['pro', 'get', 'any', 'license']
+  topic: 'License'
+  content: >
+    Email with your license code comes just a second after the payment receipt email. Thank you for your patience.
+
+- title: 'How to add a company VAT during purchase?'
+  anchor: vat-company-purchase
+  keywords: ['vat', 'company', 'freelancer']
+  topic: 'License'
+  content: >
+    On the second step of the purchase of the license, when you enter your credit card details, you can add a VAT number.
+
+- title: 'How to transfer my presets to another computer?'
+  anchor: another-computer
+  keywords: ['presets', 'csv', 'computer', 'another']
+  topic: 'Miscellaneous'
+  content: >
+    The best way to do it is to use <a href="/tutorials/misc-settings-sync/">settings synchronization</a>. Xpiks will continuously save all settings to a single file that you can import on another computer.
+
+- title: 'How much to pay to upgrade from Pro to Pro+?'
+  anchor: pro-plus-upgrade
+  keywords: []
+  topic: 'License'
+  content: >
+    If you upgrade to Pro+ yearly license, we will refund you Pro license payment. After you upgrade, please contact support and we'll process it for you.
+
+- title: 'What happens when I pause my subscription?'
+  anchor: pro-plus-pause-subscription
+  keywords: []
+  topic: 'License'
+  content: >
+    When your subscription is paused, you are not charged anymore. Your account will be preserved (e.g. cloud uploads) until your subscription is resumed. You can select for how long you would like to pause your subscription, but you can resume anytime manually or via support.
+
+- title: 'Plugin tab is disabled'
+  anchor: plugin-tab-disabled
+  topic: 'Plugins'
+  content: >
+    Plugin tab is disabled when the plugin it belongs to is disabled. To enable the plugin, go to menu <i>"Tools -> Plugins -> Plugin Manager"</i> and select <i>"Enable"</i> in the context menu of the plugin you wish to enable. Note that you need an active Pro+ license for plugins to work.

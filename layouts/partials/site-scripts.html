@@ -1,0 +1,29 @@
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script defer src="/js/referral.js"></script>
+
+{{- if ($.Scratch.Get "downloads_scripts") -}}
+<script defer src="/js/downloads.js"></script>
+{{- end -}}
+
+{{- if ($.Scratch.Get "faq_scripts") -}}
+<script defer src="/js/faq.js"></script>
+{{- end -}}
+
+{{- if ($.Scratch.Get "tutorials_scripts") -}}
+<script defer src="/js/tutorials.js"></script>
+{{- end -}}
+
+{{- if ($.Scratch.Get "testimonials_scripts") -}}
+<script defer src="/js/testimonials.js"></script>
+{{- end -}}
+
+{{- if ($.Scratch.Get "paddle_scripts") -}}
+<script defer src="https://cdn.paddle.com/paddle/paddle.js"></script>
+<script defer src="/js/pricing.js"></script>
+{{ end }}
+
+{{ if .Params.shutterstock_calculator }}
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script defer src="/js/shutterstock-calculator.js"></script>
+{{ end }}

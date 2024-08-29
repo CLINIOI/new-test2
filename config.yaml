@@ -1,0 +1,64 @@
+baseURL: "https://xpiksapp.com/"
+languageCode: "en-US"
+enableRobotsTXT: false
+enableGitInfo: true
+title: "Microstock keywording and uploading tool"
+params:
+  description: "Microstock keywording and uploading tool"
+  cloudflare_analytics_token: cb855c327ede471b894df728dfcb9e29
+languages:
+  en:
+    languageName: English
+    languageCode: en-US
+    weight: 1
+  es:
+    languageName: Spanish
+    languageCode: es-ES
+    weight: 2
+defaultContentLanguage: en
+taxonomies:
+  category: categories
+permalinks:
+  blog: /blog/:filename/
+  categories: /blog/category/:slug/
+outputs:
+  home:
+    - html
+    - rss
+    - json
+    - XpiksIndex
+outputFormats:
+  XpiksIndex:
+    baseName: xpks
+    isPlainText: true
+    mediaType: application/json
+    notAlternative: true
+markup:
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+      autoHeadingIDType: github
+    renderer:
+      hardWraps: true
+      unsafe: true
+      xhtml: true
+related:
+  includeNewer: true
+  indices:
+  - name: keywords
+    weight: 100
+  - name: title
+    weight: 70
+  - name: date
+    weight: 10
+  threshold: 10
+  toLower: false

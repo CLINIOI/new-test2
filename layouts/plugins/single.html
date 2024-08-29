@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<div class='section-head-plugin'>
+   <div class='content'>
+    <div class='media-head-plugin'>
+        <h1>{{- .Param "title" }}</h1>
+        <p>{{ .Param "description" }}</p>
+    </div>
+    <div class="img">
+        <img src="{{ (.Param "image") | relURL }}" />
+    </div>
+    <div class="title-plugin">
+        <h1>{{- .Param "title" }}</h1>
+        <p>{{ .Param "description" }}</p>
+        {{ if .Param "pro" }}
+            <p class="pro-txt">Available only for Xpiks <span class="pro-span">PRO+</span></p>
+            <a href="/tutorials/plugins-install/" class="button black-btn-color position-btn">Install</a>
+        {{ end }}
+    </div>
+   </div>
+</div>
+<div class="content-plugin">
+    <div class='content'>
+        {{- .Content -}}
+    </div>
+</div>
+{{ partial "plugin/install" . }}
+{{ end }}
+
+{{- define "body_class" -}} page-blog {{- end -}}
+{{- define "content_class" -}} main-content-gray main-content-media-white {{- end -}}

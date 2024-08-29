@@ -1,0 +1,84 @@
+{{ define "main" }}
+{{- $.Scratch.Set "subscribe" (.Param "subscribe" | default true) -}}
+<div class="head-single-post{{ if .Param "image" }} head-single-post-image{{ end }}">
+    <h1>{{ $.Title }}</h1>
+    <p class="date-full-single {{ if not .IsTranslated }}date-full-untranslated{{ end }}">updated on {{ .GitInfo.AuthorDate.Format "January 2, 2006" }}{{ if .Param "author" }} / by {{ .Param "author" }}{{ end }}</p>
+    {{- if .Param "categories" -}}
+    <p class="post-categories">
+        {{- range $category := (.Param "categories") -}}
+        <a href="/blog/category{{ $category | relURL }}/">#{{$category}}</a>
+        {{- end -}}
+    </p>
+    {{- end -}}
+    {{- if .IsTranslated -}}
+    <p class="translations">
+    <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m0 0h24v24h-24z" fill="#9297A1" opacity="0" transform="matrix(-1 0 0 -1 24 24)"/><path fill="#9297A1" d="m22 12a10 10 0 0 0 -10-10 10 10 0 0 0 0 20 10 10 0 0 0 10-10zm-2.07-1h-2.93a12.91 12.91 0 0 0 -2.33-6.54 8 8 0 0 1 5.26 6.54zm-10.85 2h5.92a11.44 11.44 0 0 1 -3 6.61 11 11 0 0 1 -2.92-6.61zm0-2a11.4 11.4 0 0 1 2.92-6.6 11.19 11.19 0 0 1 3 6.6zm.36-6.57a13.18 13.18 0 0 0 -2.37 6.57h-3a8 8 0 0 1 5.37-6.57zm-5.37 8.57h3a12.86 12.86 0 0 0 2.35 6.56 8 8 0 0 1 -5.35-6.56zm10.55 6.55a13.14 13.14 0 0 0 2.38-6.55h2.95a8 8 0 0 1 -5.33 6.55z" fill="#231f20"/></svg>
+    {{ range .Translations }}
+        <a href="{{ .Permalink }}">{{ i18n .Language.LanguageName }}</a>
+    {{ end}}
+    </p>
+    {{- end -}}
+</div>
+
+<div class="row relative single-blog">
+    <div class="bg-white"></div>
+    <!-- single post -->
+    <div class="small-12 single-post{{ if .Param "image" }} single-post-image{{ end }}">
+        <!-- can add also preventcopy style -->
+        <div class="post-item">
+            {{- if .Param "image" -}}
+            <p class="featured-image-wrapper">
+                <img alt="Feature image" src="{{ (.Param "image") | relURL }}" class="small-12 large-12">
+            </p>
+            {{- end -}}
+            <div class="post-content post-separated">
+                {{ safeHTML .Content }}
+            </div>
+            {{ partial "social-buttons" . }}
+        </div>
+    </div>
+    <!-- /single post -->
+</div>
+{{ partial "related-blog-posts" . }}
+{{ partial "schema-blog" . }}
+{{ end }}
+
+{{- define "body_class" -}}{{- end -}}
+{{- define "content_class" -}} main-content-white {{- end -}}
+
+{{ define "footerfiles" }}
+<button onclick="scrollToTop()" id="scrollToTopBtn" class="scrollToTopButton">
+    <svg class="top-button-arrow up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="5 0 50 80" xml:space="preserve">
+        <polyline fill="none" stroke="#181818" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" points="
+    0.375, 35.375 28.375, 0.375 58.67, 35.375 " />
+      </svg>
+</button>
+
+<script>
+    //Get the button
+    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  
+    var rootElement = document.documentElement
+
+    function handleScroll() {
+        // Do something on scroll
+        var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
+        if ((rootElement.scrollTop / scrollTotal ) > 0.75 ) {
+            // Show button
+            scrollToTopBtn.classList.add("showBtn")
+        } else {
+            // Hide button
+            scrollToTopBtn.classList.remove("showBtn")
+        }
+    }
+
+    document.addEventListener("scroll", handleScroll)
+  
+    function scrollToTop() {
+        rootElement.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+  </script>
+{{ end }}

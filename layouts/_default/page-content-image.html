@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="head-single-post{{ if .Param "image" }} head-page-image{{ end }}">
+    <h1>{{ $.Title }}</h1>
+ </div>
+<div class="row relative single-blog">
+    <div class="small-12 single-post{{ if .Param "image" }} single-post-image{{ end }}">
+      <div class="post-item">
+        {{- if .Param "image" -}}
+        <p class="featured-image-wrapper">
+            <img alt="Feature image" src="{{ (.Param "image") | relURL }}" class="small-12 large-12">
+        </p>
+        {{- end -}}
+        <div class="post-content">
+            {{- .Content -}}
+        </div>
+      </div>
+    </div>
+</div>
+<div class="page-content-footer">&nbsp;</div>
+{{ end }}
+{{- define "body_class" -}} page-blog {{- end -}}

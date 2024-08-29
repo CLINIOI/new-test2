@@ -1,0 +1,39 @@
+<div class="row section-default faq-default">
+    {{ $topics := slice }}
+    {{ range .Site.Data.faq }}
+        {{ $topics = $topics | append .topic }}
+    {{ end }}
+    {{ $topics = uniq $topics | sort }}
+
+    {{ range $topics }}
+    {{ $topic := . }}
+    <div class="faq-wrapper">
+        <h2>{{ . }}</h2>
+        {{ range where $.Site.Data.faq "topic" $topic }}
+        <article id="{{ .anchor }}" class="faq-item">
+            <div class="faq-item-title">
+                <div class="faq-item-icon faq-icon-none"> <svg xmlns="http://www.w3.org/2000/svg" width="11" height="18"><path fill="none" fill-rule="evenodd" stroke="#000000" stroke-width="3" d="M1 1.929L8.071 9 1 16.071"/></svg> </div>
+                <a class="faq-hash-link nohover" href="#{{ .anchor | safeURL }}"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                  </svg></a>&nbsp;{{safeHTML .title}}
+            </div>
+            <div class="faq-item-content">
+                {{safeHTML .content }}
+            </div>
+            <div class="faq-item-icon faq-icon-block"> <svg xmlns="http://www.w3.org/2000/svg" width="11" height="18"><path fill="none" fill-rule="evenodd" stroke="#000000" stroke-width="3" d="M1 1.929L8.071 9 1 16.071"/></svg> </div>
+        </article>
+        {{ end }}
+    </div>
+    {{ end }}
+</div>

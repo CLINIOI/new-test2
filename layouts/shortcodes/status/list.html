@@ -1,0 +1,6 @@
+{{- range $item := $.Site.Data.status -}}
+<article class="status-item">
+  <span class="status-date">{{ dateFormat "Jan 2 15:04" $item.date  }}  </span>&nbsp;<span class="{{$item.type}}">{{$item.title}}</span>
+  <div class="status-item-content"> {{safeHTML $item.content}}</div>
+</article>
+{{- end -}}

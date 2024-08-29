@@ -1,0 +1,10 @@
+<div id="usage" class="usage-flex">
+    <div class="total-downloads item">
+        <h2>{{ lang.FormatNumberCustom 0 ($.Site.Data.usage.total_downloads) "- . ," }}</h2>
+        <p>Total downloads</p>
+    </div>
+    <div class="active-user item">
+        <h2>{{ lang.FormatNumberCustom 0 ($.Site.Data.usage.daily) "- . ," }}</h2>
+        <p>Daily active users</p>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+- title: 'What does this calculator do?'
+  content: >
+    Using this calculator you can simulate which level of earnings you will have depending on your downloads. Shutterstock determines your royalties level <a href="https://xpiksapp.com/blog/new-shutterstock-earnings-breakdown/" target="_blank">based on the number of downloads</a> in a given year.
+
+- title: 'What is shown on the chart?'
+  content: >
+    You can see the <span class="chart__label--blue"><strong>blue line</strong></span> which represents number of downloads in your account through each month of the year (left axis). Also you can see the <span class="chart__label--red"><strong>red line</strong></span> which represents your royalties level (right axis).
+
+- title: 'Can you show my earnings in ($) dollars?'
+  content: >
+    Shutterstock pays you royalties based on customer subscriptions so it's quite hard to estimate what amount of dollars you will earn having this royalties rate.
+
+- title: 'Where to get more information about Shutterstock?'
+  content: >
+    Here's a link to <a href="https://xpiksapp.com/blog/shutterstock-ultimate-guide/" target="_blank">a detailed guide to Shutterstock</a> where you can get information how to register and upload your photos, vectors and videos.

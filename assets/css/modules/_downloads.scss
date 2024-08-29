@@ -1,0 +1,147 @@
+.section-free-downloads {
+    background: $light-gray-background;
+    padding: 3em 0;
+    text-align: center;
+
+    .download-button {
+        height: 125px;
+        padding-top: 40px;
+    }
+
+    .text-download {
+        width: 51%;
+        padding-left: 63px;
+        height: 125px;
+
+        h2 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        @media screen and (max-width: 64.063em) {
+            margin-top: 51px;
+            width: 100%;
+            text-align: center;
+            padding-left: 0;
+        }
+
+        p {
+            font-size: 16px;
+
+            span {
+                font-size: 18px;
+            }
+
+            a {
+                color: $primary-text-color;
+                text-decoration: underline;
+                
+                &:hover {
+                    color: $link-hover-color;
+                }
+            }
+        }
+    }
+
+    .button{
+        width: 230px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    @media screen and (min-width: 64.063em) {
+        padding: 105px 0;
+        text-align: left;
+        p {
+            font-size: 16px;
+        }
+
+    }
+
+    @media screen and (max-width: 64.063em) {
+        padding: 70px 0;
+    }
+
+    &.section-grey {
+        background: #F8F8FB;
+    }
+
+    color: $primary-text-color;
+
+    .section-download-logo {
+        img {
+            display: block;
+            margin: auto;
+            max-width: 144px;
+            height: auto;
+        }
+    }
+
+    .section-title {
+        font-size: $font-size-h1-small;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+}
+
+.blog-page,
+.page-downloads {
+    .page-header {
+        background: $dark-bg;
+        height: 654px;
+        @media screen and (max-width: 64.063em) {
+            height: 609px;
+        }
+        .row{
+            .small-12{
+                div{
+                    h2{
+                        color: #fff;
+                        margin-top: 45px;
+                        margin-bottom: 15px;
+                    }
+                    p{
+                        color: #ffff;
+                    }
+                    .button{
+                        background: #2979FF;
+                    }
+                    .release-notes{
+                        @media screen and (max-width: 64.063em) {
+                            margin-top: 49px;
+                        }
+                        a{
+                            color: #2979FF ;
+                            
+                        }
+
+                    }
+                }
+            }
+        }
+        .page-header-logo {
+            margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 64.063em) {
+        padding-top: 70px;
+        .page-header-logo {
+        max-width: 120px;
+                margin-bottom: 20px;
+        }
+    }
+    }
+}
+
+.page-header-download{
+    padding-bottom: 200px;
+    height: auto !important;
+    img{
+        width: 150px;
+    }
+    .main-btn-color{
+        min-width: 240px;
+    }
+}

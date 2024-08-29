@@ -1,0 +1,38 @@
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+    function onEmailSubscribe(token) {
+        document.getElementById("email-subscribe-form").submit();
+    }
+</script>
+<section class="block section-subscribe-email section-grey">
+    <div>
+        <h3>Join {{ lang.FormatNumberCustom 0 ($.Site.Data.subscribers.count) "- . ," }} subscribers</h3>
+    </div>
+    <div class="post-subscribe-email newsletter-subscribe-bg newsletter-subscribe-page">
+        <form action="https://listing.xpiksapp.com/subscribe" id="email-subscribe-form" method="post" class="plausible-event-name=Newsletter plausible-event-position=page">
+            <div class="row">
+                <div class="small-10 columns small-centered">
+                    <input type="text" id="name" name="name" placeholder="Your name">
+                </div>
+                <div class="small-10 columns small-centered">
+                    <input type="email" id="email" name="email" placeholder="Your email" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
+                </div>
+                <div class="small-10 columns small-centered button-input">
+                    <input class="button main-btn-color" type="button" value="Subscribe" onclick="grecaptcha.execute()">
+                </div>
+                <div id='recaptcha'
+                    class="g-recaptcha"
+                    data-sitekey="6Lex4sUZAAAAABJe5tUPRH2JB2ztaCEGBrnqnNxP" 
+                    data-callback="onEmailSubscribe"
+                    data-size="invisible">
+                </div>
+                <input type="hidden" id="newsletter" name="newsletter" value="Xpiks">
+                <input type="hidden" id="source" name="source" value="{{.Page.Permalink}}">
+            </div>
+        </form>
+    </div>
+    <div class="recaptcha-disclaimer">This site is protected by reCAPTCHA and the Google
+        <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+        <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+    </div>
+</section>

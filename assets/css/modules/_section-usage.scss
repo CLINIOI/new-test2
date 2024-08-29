@@ -1,0 +1,53 @@
+.usage-flex{
+    margin-top: 106px;
+    display: flex;
+    max-width: 62.5rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 64.063em) {
+        padding: 40px 18px;
+        background: $light-gray-background;
+        margin-top: 40px;
+    }
+
+    .item{
+        width: 50%;
+        text-align: center;
+
+        h2{
+            font-size: 80px;
+            font-weight: 400;
+            margin: 0;
+            @media screen and (max-width: 64.063em) {
+                font-size: 30px !important;
+
+            }
+        }
+        p{
+            color: #9297A1;
+            margin-bottom: 70px;
+            @media screen and (max-width: 64.063em) {
+                margin-bottom: 14px;
+            }
+        }
+
+    }
+
+    .total-downloads{
+        h2{
+            color: $active-downloads-foreground;
+
+        }
+        border-right: 1px solid #E0E4EA;
+        @media screen and (max-width: 64.063em) {
+            border-right: none;
+        }
+    }
+
+    .active-user{
+        h2 {
+            color: $active-user-foreground;
+        }
+    }
+}

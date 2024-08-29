@@ -1,0 +1,103 @@
+// Base Colors
+$primary-color: #1C2025;
+$primary-text-color: #000;
+$dark-bg-foreground-color: #9297A1;
+$secondary-color: #C7CCD3;
+$complimentary-color: #fff;
+$blue-accent-color: #005BF3;
+
+$body-bg: #fff;
+$dark-bg: #181818;
+$dark-bg-pages:#3A3B3D;
+$white-bg-pages: #fff;
+$body-font-color: #3E434D;
+
+$btn-bg-grey-color: #7A7E86;
+$btn-bg-grey-hover-color: #979CA5;
+
+$main-btn-normal-bg:#2979FF;
+$main-btn-hover-bg:#005BF3;
+$main-btn-active-bg:#0048C0;
+$main-btn-active-text:#75A7FF;
+
+
+$white-btn-normal-bg:#ffffff;
+$white-btn-hover-bg:#2979FF;
+$white-btn-active-bg:#0048C0;
+
+$white-btn-normal-text:#ffffff;
+$white-btn-hover-text:#2979FF;
+$white-btn-active-text:#0048C0;
+
+$black-btn-normal-bg:#000000;
+$black-btn-hover-bg:#2979FF;
+$black-btn-active-bg:#0048C0;
+
+$black-btn-normal-text:#000000;
+$black-btn-hover-text:#2979FF;
+$black-btn-active-text:#0048C0;
+
+$yellow-color: #FDBC2D;
+
+$btn-big:52px;
+$btn-small:38px;
+// Links
+$gray-link-color: #9297A1;
+$gray-link-hover-color: #cfd2d5;
+$link-color: #005BF3;
+$link-hover-color: #2979FF;
+$link-visited-color: #0048C0;
+$link-normal-color: #005BF3;
+$links-hover-color:#2979FF;
+$links-clicked-color: #0048c0;
+// Text
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
+$base-font-family: $font-family-sans-serif;
+$base-font-size: 1.0em;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+// Primary Navbar Settings
+$navbar-height: 70px;
+$navbar-color: $primary-color;
+$navbar-text-color: #BEC2CA;
+$navbar-hover-color: #fff;
+$navbar-active-color: $btn-bg-grey-color;
+$navbar-font-size: 16px;
+$navbar-font-family: $font-family-sans-serif;
+
+// Socials Navbar Settings
+$socials-font-color: $secondary-color;
+$socials-font-size: 1.5em;
+// Menus
+$menus-normal-color: #bec2ca;
+$menus-hover-color:#ffffff;
+$menus-clicked-color: #bec2ca;
+$menus-selected-color: #ffffff;
+
+// Utility
+$spacing-unit: 30px;
+
+// Footer
+$footer-color: #979CA5;
+
+//Font
+$font-size-h1: 40px;
+$font-size-h1-small: 26px;
+
+$font-size-p: 16px;
+$font-size-p-small: 14px;
+
+$font-size-hero: 50px;
+$font-size-hero-small: 26px;
+
+$light-gray-background: #F8F9FB;
+$gray-background: #C7CCD3;
+
+$input-border-color: #ccc;
+
+// Xpiks Pro
+$pro-background-color: #8925ff;
+
+$active-user-foreground: $yellow-color;
+$active-downloads-foreground: #2979FF;

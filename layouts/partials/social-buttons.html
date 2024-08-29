@@ -1,0 +1,30 @@
+{{- $shareUrl := $.Permalink -}}
+{{- $shareTitle := ($.Title | htmlEscape) -}}
+{{- $shareImg := ($.Param "image") | absURL -}}
+<div class="social-buttons-wrapper">
+  <div class="text-social">Like this article? Spread the word!</div>
+  <div class="flex">
+    <!-- Sharingbutton Facebook -->
+    <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u={{$shareUrl }}" target="_blank" rel="nofollow noopener" aria-label="Facebook">
+      <img src="{{ ( path.Join "/images/icon-social/facebook2.png") | relURL }}" alt="Facebook share button">
+    </a>
+    <!-- Sharingbutton linkedin -->
+    <a class="resp-sharing-button__link" href="https://www.linkedin.com/sharing/share-offsite/?url={{$shareUrl }}" target="_blank" rel="nofollow noopener" aria-label="Linkedin">
+      <img src="{{ ( path.Join "/images/icon-social/linkedin.png") | relURL }}" alt="LinkedIn share button">
+    </a>
+    <!-- Sharingbutton Pinterest -->
+    <a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url={{ $shareUrl }}&amp;description={{ $shareTitle }}&amp;media={{ $shareImg }}" target="_blank" rel="nofollow noopener" aria-label="Pinterest">
+      <img src="{{ ( path.Join "/images/icon-social/pinterest.png") | relURL }}" alt="Pinterest share button">
+    </a>
+    <!-- Sharingbutton Telegram -->
+    <a class="resp-sharing-button__link" href="https://telegram.me/share/url?text={{ $shareTitle }}&amp;url={{ $shareUrl }}" target="_blank" rel="nofollow noopener" aria-label="Telegram">
+      <img src="{{ ( path.Join "/images/icon-social/telegram.png") | relURL }}" alt="Telegram share button">
+    </a>
+    <!-- Sharingbutton Twitter -->
+    <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text={{ $shareTitle }}&amp;url={{ $shareUrl }}" target="_blank" rel="nofollow noopener" aria-label="Twitter">
+      <img src="{{ ( path.Join "/images/icon-social/twitter.png") | relURL }}" alt="Twitter share button">
+    </a>
+  </div>
+</div>
+
+

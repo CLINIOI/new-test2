@@ -1,0 +1,59 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{- $title := $.Site.Title -}}
+{{- if $.Title -}} {{- $title = $.Title -}} {{- end -}}
+{{- if .Params.add_topic_title -}}
+  {{- $topics := where $.Site.RegularPages "Type" "topic" -}}
+  {{- $topic := index (where $topics "Params.slug" "eq" $.Params.topic) 0 -}}
+  {{- $title = (printf "%s: %s" $topic.Title $.Title) -}}
+{{- end -}}
+{{- $siteArea := "Xpiks" -}}
+{{- if .Params.site_area -}}
+{{- $siteArea = .Params.site_area -}}
+{{- end -}}
+<title>{{ $title }} | {{ $siteArea }}</title>
+{{- $about :=  $.Site.Params.description -}}
+{{- if $.Content -}}
+  {{- $about = ($.Content | htmlUnescape | safeHTML | plainify) -}}
+  {{- $about = (replaceRE "(?m)(\\r|\\n)" " " $about) -}}
+  {{- $about = (replaceRE " +"   " " $about) -}}
+  {{- $about = (replaceRE "^ +"  ""  $about) -}}
+  {{- $about = (replaceRE " +$"  ""  $about) -}}
+  {{- $about = (truncate 160  ""  $about) -}}
+{{- end -}}
+<meta name="description" content="{{$about}}">
+{{$style1 := resources.Get "css/main.scss"   | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
+<link rel="stylesheet" media="screen, projection" href="{{ $style1.RelPermalink }}" type="text/css">
+{{$style2 := resources.Get "css/custom.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
+<link rel="stylesheet" media="screen, projection" href="{{ $style2.RelPermalink }}" type="text/css">
+{{- if .Params.shutterstock_calculator -}}
+<link href="/css/shutterstock-calculator.css" rel="stylesheet" id="shutterstock-calculator">
+{{ end }}
+<link rel="canonical" href="{{$.Permalink}}">
+<link rel="alternate" type="application/atom+xml" title="{{ $.Site.Title }}" href='{{ "index.xml" | relURL }}'/>
+<link rel="shortcut icon" type="image/png" href='{{"favicon.png?v=1" | relURL }}'>
+{{ if .IsTranslated }}
+{{- range .Translations -}}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+{{- end -}}
+{{ end }}
+<meta name="p:domain_verify" content="e76273785d4e710665db76a033aac54c"/>
+<meta property="og:title" content="{{$title}}" />
+<meta property="og:locale" content="{{ $.Site.LanguageCode | default "en" }}" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="{{$about}}" />
+<meta property="og:url" content="{{$.Permalink}}" />
+{{ if (isset .Params "image") }}
+<meta property="og:image" content='{{ (.Param "image") | absURL }}' />
+{{ end }}
+<meta property="og:site_name" content="Xpiks" />
+<meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
+{{ if .Params.hidden }}
+<meta name="robots" content="noindex" />
+{{ end }}
+{{ if .Params.sentry }}
+<script src='https://js.sentry-cdn.com/b7198d7f951049e3ba86810a30a46fe5.min.js' crossorigin="anonymous"></script>
+{{ end }}
+{{ partial "cloudflare_analytics" . }}
+{{ partial "plausible_analytics" . }}

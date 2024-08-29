@@ -1,0 +1,15 @@
+<div style="padding: 20px 20px 0px 20px;margin-bottom: 20px; border: 1px solid #cccccc">
+<div class="row">
+    <div class="columns large-6 medium-6 small-12">
+        <p>
+            Earning per image per month = $<output name="imageVal" id="imageVal">0.08</output><br /><input type="range" id="imageEarningInput" min="0.08" max="10" value="0.08" step="0.01" oninput="document.getElementById('imageVal').innerText = parseFloat(this.value);let result = parseFloat(this.value) * parseInt(document.getElementById('sizeValueInput').value);document.getElementById('monthlyEarnings').innerText = result.toFixed(2);">
+          </p>
+          <p>
+            Size of portfolio = <output name="sizeVal" id="sizeVal">100</output><br /><input type="range" id="sizeValueInput" min="100" max="5000" value="100" step="100" oninput="document.getElementById('sizeVal').innerText = parseInt(this.value);let result = parseInt(this.value) * parseFloat(document.getElementById('imageEarningInput').value);document.getElementById('monthlyEarnings').innerText = result.toFixed(2);">
+          </p>
+    </div>
+    <div class="columns large-6 medium-6 small-12 monthly-results">
+        <p style="font-size: 22px;"><strong>Monthly earnings:</strong> <br />$<output id="monthlyEarnings">8</output></p>
+    </div>
+</div>
+</div>

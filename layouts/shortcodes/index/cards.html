@@ -1,0 +1,19 @@
+<section class="section-cards">
+    <div class="line row"></div>
+    <div class="cards-top row">
+        <h2>What you can do with Xpiks</h2>    
+        <p>With Xpiks you can build your own unique workflows for adding metadata and submitting your artworks to microstocks. Xpiks automates majority of the routine tasks and allows you to accomplish your goal faster.</p>
+    </div>
+    <div class="cards-titles row">
+        {{ range $card := $.Site.Data.cards }}
+        <div class="card-block">
+           <div class="square color-cards-{{$card.color}}">
+               <img src="{{$card.image}}" alt="{{$card.title}}" />
+           </div>
+           <h3>{{$card.title}}</h3>
+           <p>{{$card.text}}</p>
+        </div>
+        {{ end }}
+    </div>
+    <div class="line-bottom row"></div>
+</section>

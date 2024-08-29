@@ -1,0 +1,39 @@
+{{- $sections := slice -}}
+{{- range .Site.Data.navFooter -}}
+    {{- $sections = $sections | append .section -}}
+{{- end -}}
+{{- $sections = uniq $sections | sort -}}
+
+<footer class="site-footer">
+  <div class="row">
+    <div class="small-12 columns col-right">
+      <nav class="footer-nav">
+    {{- range $sections -}}
+    {{- $section := . -}}
+       <div>
+          <ul>
+        {{- range where $.Site.Data.navFooter "section" $section -}}
+            <li> 
+              <a class='menus-text' href="{{ .href }}">{{ .title }}</a>
+            </li>
+        {{- end -}}
+          </ul>
+       </div>
+          {{- end -}}
+      </nav>
+      <div class="line"></div>
+      <div class="copy">
+        <div class="left-copy">
+          <span class="darkgray">&copy; 2014-{{ dateFormat "2006" now  }} Intmaker OÜ</span>
+        </div>
+        <div class="right-copy">
+          {{- range $item := $.Site.Data.socialLogos -}}
+            <a href="{{$item.href}}">
+              <img src="{{(path.Join "/images/icon-social" $item.icon ) | relURL}}" alt="">
+            </a>
+          {{- end -}}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

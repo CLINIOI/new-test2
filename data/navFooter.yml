@@ -1,0 +1,84 @@
+- title: Affiliate program
+  section: legal
+  href: /affiliate-program/
+
+- title: Write for us
+  section: site
+  href: /write-for-us/
+
+- title: Search
+  href: /search/
+  section: site
+
+- title: About
+  section: legal
+  href: /about/
+
+- title: Legal
+  href: /eula/
+  section: legal
+
+- title: Support
+  section: site
+  href: /support/
+
+- title: Tutorials
+  section: site
+  href: /tutorials/
+
+- title: Privacy
+  section: legal
+  href: /privacy/
+
+- title: FAQ
+  section: site
+  href: /faq/
+
+- title: Open Source
+  section: legal
+  href: /acknowledgements/
+
+- title: Newsletter
+  section: social
+  href: /newsletter/
+
+- title: Blog
+  section: social
+  href: /blog/
+
+- title: Facebook
+  section: social
+  href: https://facebook.com/xpiksapp
+
+- title: Pinterest
+  section: social
+  href: https://www.pinterest.com/xpiks
+
+- title: Reddit
+  section: social
+  href: https://www.reddit.com/r/Xpiks
+
+  #- title: GitHub
+  #  section: social
+  #  href: https://github.com/Xpiks/issue-tracker
+
+- title: Pricing
+  href: /pricing/
+  section: xbuy
+
+- title: 'Pro features'
+  href: /pro-features/
+  section: xbuy
+
+- title: 'Cloud upload'
+  href: /cloud-upload/
+  section: xbuy
+
+- title: Testimonials
+  section: xbuy
+  href: /testimonials/
+
+- title: Downloads
+  href: /downloads/
+  section: xbuy
+

@@ -1,0 +1,21 @@
+<div class="section-plugins-card">
+    <div class="flex">
+        {{ $pages := (sort (where $.Sites.First.RegularPages "Type" "plugins") "Params.order") }}
+        {{ range $page := $pages }}
+        <div class="block card-block">
+            <a class="img" href="{{$page.RelPermalink}}">
+                <img src="{{$page.Param "image" | relURL}}" />
+            </a>
+            <h2>
+                <a class="plugin-link" href="{{$page.RelPermalink}}">{{ $page.Param "title" }}</a>
+            </h2>
+            <p class="plugin-description">
+                {{ $page.Param "description" }}
+            </p>
+            <p>
+                <a class="links link-with-arrow" href="{{$page.RelPermalink}}">See more {{partial "arrow-right"}}</a>
+            </p>
+        </div>
+        {{ end }}
+    </div>
+</div>

@@ -1,0 +1,8 @@
+{{ define "main" }}
+    {{ partial "plugin/header-plugin" . }}
+    {{ partial "plugin/content-plugin" . }}
+    {{ partial "plugin/paginator-plugins" . }}
+{{ end }}
+
+{{- define "body_class" -}} page-blog {{- end -}}
+{{- define "content_class" -}} main-content-gray main-content-media-white {{- end -}}
